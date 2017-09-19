@@ -34,8 +34,8 @@ Catro Street consists of technical review notes of knowledge for data structures
 
   Returns the indices of two numbers in the input array that add up to the target number.
 
-* Solution 1: Brute force, O(n<sup>2</sup>) 
-* Solution 2: Dictionary. O(n). Set buffer_dictionary[target-nums[i]] = i if nums[i] not in buffer dictionary.  
+  * Solution 1: Brute force, O(n<sup>2</sup>) 
+  * Solution 2: Dictionary. O(n). Set buffer_dictionary[target-nums[i]] = i if nums[i] not in buffer dictionary.  
 
 2. [Equal Value Index](https://github.com/amandazhuyilan/Castro-Street/blob/master/equalIndexValue.py)
 
