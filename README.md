@@ -39,7 +39,7 @@ Catro Street consists of technical review notes of knowledge for data structures
 
 2. [Equal Value Index](https://github.com/amandazhuyilan/Castro-Street/blob/master/equalIndexValue.py)
 
-  Given a sorted array, find if there exists an entry where its value equal to its corresponding index. Uses binary search to validate if average length of new halved array equals to the entry. Time complexity O(logn).
+  Given a sorted array, find if there exists an entry where its value equal to its corresponding index. Uses binary search to   validate if average length of new halved array equals to the entry. Time complexity O(logn).
 
 
 <a name= "Cheat_Sheets"></a>
