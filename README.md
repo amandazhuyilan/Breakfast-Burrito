@@ -1,4 +1,4 @@
-This repo consists of technical review notes of knowledge for data structures, algorithms and essential computer knowledge. Solved questions completed in Python 3 from the [Green Bible](https://www.amazon.com/Cracking-Coding-Interview-Programming-Questions/dp/0984782850/ref=sr_1_1?ie=UTF8&qid=1505751073&sr=8-1&keywords=crack+the+coding+interview) and [Leetcode](http://www.leetcode.com) would be available.
+Catro Street consists of technical review notes of knowledge for data structures, algorithms and essential computer knowledge. Solved questions completed in Python 3 from the [Green Bible](https://www.amazon.com/Cracking-Coding-Interview-Programming-Questions/dp/0984782850/ref=sr_1_1?ie=UTF8&qid=1505751073&sr=8-1&keywords=crack+the+coding+interview) and [Leetcode](http://www.leetcode.com) would be available.
 
 ## Table of Contents 
 [Technical Review Notes](#Techinical_Review_Notes)
@@ -14,20 +14,32 @@ This repo consists of technical review notes of knowledge for data structures, a
 
 <a name="Data_Structure"></a>
 ### Data structures
+* [Vector](https://github.com/amandazhuyilan/Castro-Street/blob/master/vector)
+
+  The coordinates of a geometric vector in a multidimensional space.
 
 <a name="Sorting_Algorithms"></a>
 ### Sorting Algorithms
 * [Insertion Sort](https://github.com/amandazhuyilan/Castro-Street/blob/master/InsertionSort.py)
 
-An efficient algorithm for sorting a small number of elements. Time complexity: Best O(n), Worst: O(n<sup>2</sup>).
+  An efficient algorithm for sorting a small number of elements. Time complexity: Best O(n), Worst: O(n<sup>2</sup>).
+
+* [Merge Sort](https://github.com/amandazhuyilan/Castro-Street/blob/master/MergeSort.py)
+
+  A divide, conquer and combine recursive sorting algorithm. Time complexity: O(n log(n)).
 
 <a name="Problems_and_Solutions"></a>
 ## Problems and Solutions
 1. [Two sums](https://github.com/amandazhuyilan/Castro-Street/blob/master/twoSums.py)
-Returns the indices of two numbers in the input array that add up to the target number.
+
+  Returns the indices of two numbers in the input array that add up to the target number.
 
 * Solution 1: Brute force, O(n<sup>2</sup>) 
 * Solution 2: Dictionary. O(n). Set buffer_dictionary[target-nums[i]] = i if nums[i] not in buffer dictionary.  
+
+2. [Equal Value Index](https://github.com/amandazhuyilan/Castro-Street/blob/master/equalIndexValue.py)
+
+  Given a sorted array, find if there exists an entry where its value equal to its corresponding index. Uses binary search to validate if average length of new halved array equals to the entry. Time complexity O(logn).
 
 
 <a name= "Cheat_Sheets"></a>
