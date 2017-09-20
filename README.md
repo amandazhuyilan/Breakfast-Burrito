@@ -12,7 +12,7 @@ Catro Street consists of technical review notes of knowledge for data structures
 [Problems and Solutions](#Problems_and_Solutions)
 
 <a name="Data_Structure"></a>
-### Data structur implementations
+### Data structure implementations
 * [Vectors](https://github.com/amandazhuyilan/Castro-Street/blob/master/vector)
 
   The coordinates of a geometric vector in a multidimensional space.
