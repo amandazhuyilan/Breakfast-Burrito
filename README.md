@@ -2,14 +2,18 @@ Catro Street consists of technical review notes of knowledge for data structures
 
 ## Table of Contents 
 [Technical Review Notes](https://github.com/amandazhuyilan/Castro-Street/edit/master/Tech_Review_2017.md)
+
 [Data Structures](#Data_Structure)
+
 [Sorting Algorithms](#Sorting_Algorithms)
+
 [Cheat Sheets](#Cheat_Sheets)  
+
 [Problems and Solutions](#Problems_and_Solutions)
 
 <a name="Data_Structure"></a>
 ### Data structures
-* [Vector](https://github.com/amandazhuyilan/Castro-Street/blob/master/vector)
+* [Vectors](https://github.com/amandazhuyilan/Castro-Street/blob/master/vector)
 
   The coordinates of a geometric vector in a multidimensional space.
 
