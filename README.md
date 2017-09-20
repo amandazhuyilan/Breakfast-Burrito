@@ -37,11 +37,6 @@ Catro Street consists of technical review notes of knowledge for data structures
   * Solution 1: Brute force, O(n<sup>2</sup>) 
   * Solution 2: Dictionary. O(n). Set buffer_dictionary[target-nums[i]] = i if nums[i] not in buffer dictionary.  
 
-2. [Equal Value Index](https://github.com/amandazhuyilan/Castro-Street/blob/master/equalIndexValue.py)
-
-  Given a sorted array, find if there exists an entry where its value equal to its corresponding index. Uses binary search to   validate if average length of new halved array equals to the entry. Time complexity O(logn).
-
-
 <a name= "Cheat_Sheets"></a>
 ### Cheat Sheets
   - [Big Oh](http://bigocheatsheet.com/)
