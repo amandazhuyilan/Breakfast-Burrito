@@ -1,5 +1,14 @@
-# Technical Review Notes 2017
+# Technical Review Notes
 Credits for _Cracking the Code Interview, 6th edition_ and _Data Structure and Algorithms in Python_. 
+
+## Time/Space Complexity
+
+### Big-O, Big-Ω, Big-Θ and Little-O
+- T(n) is O(f(n)) = growth rate of T(n) <= growth rate of f(n) _Upper Bound_
+- T(n) is Ω(f(n)) = growth rate of T(n) >= growth rate of f(n) _Lower Bound_
+- T(n) is Θ(f(n)) = growth rate of T(n) == growth rate of f(n)f(n) _Exact Bound_
+- T(n) is o(f(n)) = growth rate of T(n)T(n) < growth rate of f(n)f(n) _Upper Bound that does not equal to_
+
 
 ## Strings and Arrays
 
