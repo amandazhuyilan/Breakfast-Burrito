@@ -4,7 +4,7 @@
 # Python strings are immutable, thus the only way to solve it is to 
 # create a new string with the %20 added in it 
 
-def URLify(input_str, length):
+def URLify(input_str):
 	space_index = [0]
 	result_str = None
 
@@ -24,9 +24,9 @@ def URLify(input_str, length):
 
 
  	# add in the last word into result
- 	result_str = result_str + input_str[(space_index[-1]+1): length]
+ 	result_str = result_str + input_str[(space_index[-1]+1): len(input_str)]
 
  	return result_str
 
 TEST_CASE = "This is a string"
-print(URLify(TEST_CASE, 16))
+print(URLify(TEST_CASE))
