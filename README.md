@@ -58,15 +58,14 @@ Catro Street consists of technical review notes of knowledge for data structures
   Output: `[1,4]`
   
 2. [Is Unique](https://github.com/amandazhuyilan/Castro-Street/blob/master/isUnique.py)
-
   Checks if the characters in the input string is unique. O(n).
   
 3. [URLify](https://github.com/amandazhuyilan/Castro-Street/blob/master/URLify.py)
-  
   Replaces the space(s) of input string.
   
-4. [set Zeroes Matrix]
-
+4. [set Zeroes Matrix](https://github.com/amandazhuyilan/Castro-Street/Problems-and-Solutions/setZeroMatrix.py)
+  Given a m x n matrix, if an element is 0, set its entire row and column to 0. Do it in place.
+  
 <a name= "Cheat_Sheets"></a>
 ### Cheat Sheets
   - [Big Oh](http://bigocheatsheet.com/)
