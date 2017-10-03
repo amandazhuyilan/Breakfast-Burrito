@@ -13,19 +13,36 @@ Catro Street consists of technical review notes of knowledge for data structures
 
 <a name="Data_Structure"></a>
 ### Data structure implementations
-* [Vectors](https://github.com/amandazhuyilan/Castro-Street/blob/master/vector)
+* [Binary Search Trees](https://github.com/amandazhuyilan/Castro-Street/Data-Structures/BinarySearchTree.py)
 
-  The coordinates of a geometric vector in a multidimensional space.
+* [Red Black Trees](https://github.com/amandazhuyilan/Castro-Street/Data-Structures/LinkedList.py)
+
+* [Linked lists](https://github.com/amandazhuyilan/Castro-Street/Data-Structures/LinkedList.py)
+  - Loop detecting: 
 
 <a name="Sorting_Algorithms"></a>
 ### Sorting Algorithms
-* [Insertion Sort](https://github.com/amandazhuyilan/Castro-Street/blob/master/InsertionSort.py)
+* [Counting Sort](https://github.com/amandazhuyilan/Castro-Street/Algorithms/CountingSort.py)
+  Sorting on O(n). Uses an auxiliary array that holds the number of elememts that equal to the index of Index_Arr. 
+  Based on the number of entires specified in the Index_Arr, the Out_Arr stores the sorted array in an ascending order.
+  
+* [Heap Sort](https://github.com/amandazhuyilan/Castro-Street/Algorithms/HeapSort.py)
+
+* [Quick Sort](https://github.com/amandazhuyilan/Castro-Street/Algorithms/QuickSort.py)
+
+* [Insertion Sort](https://github.com/amandazhuyilan/Castro-Street/Algorithms/InsertionSort.py)
 
   An efficient algorithm for sorting a small number of elements. Time complexity: Best O(n), Worst: O(n<sup>2</sup>).
 
-* [Merge Sort](https://github.com/amandazhuyilan/Castro-Street/blob/master/MergeSort.py)
+* [Merge Sort](https://github.com/amandazhuyilan/Castro-Street/Algorithms/MergeSort.py)
 
   A divide, conquer and combine recursive sorting algorithm. Time complexity: O(n log(n)).
+  
+### Searching Algorithms 
+* [Breadth First Search](https://github.com/amandazhuyilan/Castro-Street/Algorithms/BFS.py)
+
+* [Depth First Search](http://github.com/amandazhuyilan/Castro-Street/Algorithms/DFS.py)
+  
 
 <a name="Problems_and_Solutions"></a>
 ## Problems and Solutions
@@ -41,13 +58,14 @@ Catro Street consists of technical review notes of knowledge for data structures
   Output: `[1,4]`
   
 2. [Is Unique](https://github.com/amandazhuyilan/Castro-Street/blob/master/isUnique.py)
-
   Checks if the characters in the input string is unique. O(n).
   
 3. [URLify](https://github.com/amandazhuyilan/Castro-Street/blob/master/URLify.py)
+  Replaces the space(s) of input string.
   
-  Replaces the space(s) of input string 
-
+4. [set Zeroes Matrix](https://github.com/amandazhuyilan/Castro-Street/Problems-and-Solutions/setZeroMatrix.py)
+  Given a m x n matrix, if an element is 0, set its entire row and column to 0. Do it in place.
+  
 <a name= "Cheat_Sheets"></a>
 ### Cheat Sheets
   - [Big Oh](http://bigocheatsheet.com/)
