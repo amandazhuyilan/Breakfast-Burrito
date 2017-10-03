@@ -13,35 +13,36 @@ Catro Street consists of technical review notes of knowledge for data structures
 
 <a name="Data_Structure"></a>
 ### Data structure implementations
-* [Binary Search Trees](https://github.com/amandazhuyilan/Castro-Street/Data-Structures/BinarySearchTree.py)
+* [Binary Search Trees](https://github.com/amandazhuyilan/Castro-Street/blob/master/Data-Structures/BinarySearchTree.py)
 
-* [Red Black Trees](https://github.com/amandazhuyilan/Castro-Street/Data-Structures/LinkedList.py)
+* [Red Black Trees](https://github.com/amandazhuyilan/Castro-Street/blob/master/Data-Structures/LinkedList.py)
 
-* [Linked lists](https://github.com/amandazhuyilan/Castro-Street/Data-Structures/LinkedList.py)
+* [Linked lists](https://github.com/amandazhuyilan/Castro-Street/blob/master/Data-Structures/LinkedList.py)
   - Loop detecting: 
 
 <a name="Sorting_Algorithms"></a>
 ### Sorting Algorithms
-* [Counting Sort](https://github.com/amandazhuyilan/Castro-Street/Algorithms/CountingSort.py)
+* [Counting Sort](https://github.com/amandazhuyilan/Castro-Street/blob/master/Algorithms/CountingSort.py)
+  
   Sorting on O(n). Uses an auxiliary array that holds the number of elememts that equal to the index of Index_Arr. 
   Based on the number of entires specified in the Index_Arr, the Out_Arr stores the sorted array in an ascending order.
   
-* [Heap Sort](https://github.com/amandazhuyilan/Castro-Street/Algorithms/HeapSort.py)
+* [Heap Sort](https://github.com/amandazhuyilan/Castro-Street/blob/master/Algorithms/HeapSort.py)
 
-* [Quick Sort](https://github.com/amandazhuyilan/Castro-Street/Algorithms/QuickSort.py)
+* [Quick Sort](https://github.com/amandazhuyilan/Castro-Street/blob/master/Algorithms/QuickSort.py)
 
-* [Insertion Sort](https://github.com/amandazhuyilan/Castro-Street/Algorithms/InsertionSort.py)
+* [Insertion Sort](https://github.com/amandazhuyilan/Castro-Street/blob/master/Algorithms/InsertionSort.py)
 
   An efficient algorithm for sorting a small number of elements. Time complexity: Best O(n), Worst: O(n<sup>2</sup>).
 
-* [Merge Sort](https://github.com/amandazhuyilan/Castro-Street/Algorithms/MergeSort.py)
+* [Merge Sort](https://github.com/amandazhuyilan/Castro-Street/blob/master/Algorithms/MergeSort.py)
 
   A divide, conquer and combine recursive sorting algorithm. Time complexity: O(n log(n)).
   
 ### Searching Algorithms 
-* [Breadth First Search](https://github.com/amandazhuyilan/Castro-Street/Algorithms/BFS.py)
+* [Breadth First Search](https://github.com/amandazhuyilan/Castro-Street/blob/master/Algorithms/BFS.py)
 
-* [Depth First Search](http://github.com/amandazhuyilan/Castro-Street/Algorithms/DFS.py)
+* [Depth First Search](https://github.com/amandazhuyilan/Castro-Street/blob/master/Algorithms/DFS.py)
   
 
 <a name="Problems_and_Solutions"></a>
@@ -63,7 +64,7 @@ Catro Street consists of technical review notes of knowledge for data structures
 3. [URLify](https://github.com/amandazhuyilan/Castro-Street/blob/master/URLify.py)
   Replaces the space(s) of input string.
   
-4. [set Zeroes Matrix](https://github.com/amandazhuyilan/Castro-Street/Problems-and-Solutions/setZeroMatrix.py)
+4. [set Zeroes Matrix](https://github.com/amandazhuyilan/Castro-Street/blob/master/Problems-and-Solutions/setZeroMatrix.py)
   Given a m x n matrix, if an element is 0, set its entire row and column to 0. Do it in place.
   
 <a name= "Cheat_Sheets"></a>
