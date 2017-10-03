@@ -36,9 +36,17 @@ Catro Street consists of technical review notes of knowledge for data structures
   * Solution 1: Brute force, O(n<sup>2</sup>) 
   * Solution 2: Dictionary. O(n). Set buffer_dictionary[target-nums[i]] = i if nums[i] not in buffer dictionary.  
   
+  `TEST_CASE = ([1,4,5,10,3], 7)`
+  
+  Output: `[1,4]`
+  
 2. [Is Unique](https://github.com/amandazhuyilan/Castro-Street/blob/master/isUnique.py)
 
   Checks if the characters in the input string is unique. O(n).
+  
+3. [URLify](https://github.com/amandazhuyilan/Castro-Street/blob/master/URLify.py)
+  
+  Replaces the space(s) of input string 
 
 <a name= "Cheat_Sheets"></a>
 ### Cheat Sheets
