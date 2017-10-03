@@ -40,4 +40,12 @@ Red Black trees is a balanced Binary Search tree with an extra bit per node-> ma
 * Operations: front, back, push_back, pop_back
 * vector<int> is non-array, non-reference, and non-pointer - it is being passed by value, and hence it will call copy-    constructor. Must use vector<int>& to pass it as reference.
   
-  
+### Other stuff
+#### When you type a URL into a web browser, this is what happens:
+- If the URL contains a domain name, the browser first connects to a domain name server and retrieves the corresponding IP address for the web server.
+- The web browser connects to the web server and sends an HTTP request (via the protocol stack) for the desired web page.
+- The web server receives the request and checks for the desired page. If the page exists, the web server sends it. If the server cannot find the requested page, it will send an HTTP 404 error message. 
+- The web browser receives the page back and the connection is closed.
+- The browser then parses through the page and looks for other page elements it needs to complete the web page. These usually include images, applets, etc.
+- For each element needed, the browser makes additional connections and HTTP requests to the server for each element.
+- When the browser has finished loading all images, applets, etc. the page will be completely loaded in the browser window.
