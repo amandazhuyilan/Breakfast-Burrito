@@ -88,3 +88,4 @@ Catro Street consists of technical review notes of knowledge for data structures
   - [Big Oh](http://bigocheatsheet.com/)
   - [Time Complexity Cheat Sheet](https://www.packtpub.com/sites/default/files/downloads/4874OS_Appendix_Big_O_Cheat_Sheet.pdf)
   - [HTML](http://www.simplehtmlguide.com/cheatsheet.php)
+  - [How does the internet works?](https://web.stanford.edu/class/msande91si/www-spr04/readings/week1/InternetWhitepaper.htm)
