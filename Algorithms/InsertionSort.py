@@ -13,7 +13,6 @@ def Insertion_Sort_Ascending (A):
 
 	return A
 
-#sort the input array in descending order.
 def Insertion_Sort_Descending (A):
 	for j in range (1, len(A)):
 		key = A[j]

@@ -12,7 +12,7 @@ def Merge(left, right):
 		else:
 			result.append(right[j])
 			j+= 1
-
+			
 		if i == len(left) or j == len(right):
 			result.extend(left[i:] or right[j:])
 			break 
@@ -28,6 +28,7 @@ def MergeSort(list):
 	right = MergeSort(list[middle:])
 
 	return Merge(left, right)
+
 
 
 TEST_CASE = [98, 3, 8, 5, 10, 9]
