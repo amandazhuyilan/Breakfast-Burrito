@@ -23,23 +23,37 @@ Catro Street consists of technical review notes of knowledge for data structures
   
   Binary Tree Traversals
   - In-order: 
+  
   ` func InOrderTraversal(node):
+  
       while node != None
+      
         InOrderTraversal(node.left)
+        
         visit(node)
+        
         InOrderTraversal(node.right)`
      
   - Pre-order: 
+  
   ` func PreOrderTraversal(node):
+  
       while node != None
+      
         visit(node)
+        
         PreOrderTraversal(node.left)
+        
         PreOrderTraversal(node.right)`
       
   - Post-order: 
+  
   ` func PostOrderTraversal(node):
+  
       while node != None
+      
         PostOrderTraversal(node.left)
+        
         PostOrderTraversal(node.right)
         visit(node)`
 * Binary Heaps
@@ -80,7 +94,7 @@ Catro Street consists of technical review notes of knowledge for data structures
   - Preferred if want to find shortest path between two nodes, as we wish to stay close to the starting node as close as possible.
   - Can be implemented using recursive or queue.
 
--[Depth First Search](https://github.com/amandazhuyilan/Castro-Street/blob/master/Algorithms/DFS.py)
+- [Depth First Search(DFS)](https://github.com/amandazhuyilan/Castro-Street/blob/master/Algorithms/DFS.py)
   - Start at root or selected node and explore each branch completely before moving on to next branch.
   - Preferred if want to visit all nodes in graph. Simpler compared to BFS.
   - Tree Traversals mentioned above are a form of DFS.
