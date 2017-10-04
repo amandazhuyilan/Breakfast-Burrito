@@ -24,9 +24,7 @@ Catro Street consists of technical review notes of knowledge for data structures
   Binary Tree Traversals
   - In-order: 
   
-  ` func InOrderTraversal(node):
-  
-      while node != None
+  `  while node != None
       
         InOrderTraversal(node.left)
         
@@ -35,9 +33,7 @@ Catro Street consists of technical review notes of knowledge for data structures
         InOrderTraversal(node.right)`
      
   - Pre-order: 
-  
-  ` func PreOrderTraversal(node):
-  
+  `
       while node != None
       
         visit(node)
@@ -47,9 +43,7 @@ Catro Street consists of technical review notes of knowledge for data structures
         PreOrderTraversal(node.right)`
       
   - Post-order: 
-  
-  ` func PostOrderTraversal(node):
-  
+    `
       while node != None
       
         PostOrderTraversal(node.left)
