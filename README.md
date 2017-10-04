@@ -12,16 +12,51 @@ Catro Street consists of technical review notes of knowledge for data structures
 [Problems and Solutions](#Problems_and_Solutions)
 
 <a name="Data_Structure"></a>
-### Data structure implementations
+### Data structures
 * [Binary Search Trees](https://github.com/amandazhuyilan/Castro-Street/blob/master/Data-Structures/BinarySearchTree.py)
 
+  - A binary search tree is a binary tree in which all left decendents <= n <= all right decendents.
+  
+  - Complete binary tree: every level is filled except for perhaps the last level.
+  - Full binary tree: every node has zero or two children.
+  - Perfect binary tree: both full and complete.
+  
+  Binary Tree Traversals
+  - In-order: 
+  ` func InOrderTraversal(node):
+      while node != None
+        InOrderTraversal(node.left)
+        visit(node)
+        InOrderTraversal(node.right)`
+     
+  - Pre-order: 
+  ` func PreOrderTraversal(node):
+      while node != None
+        visit(node)
+        PreOrderTraversal(node.left)
+        PreOrderTraversal(node.right)`
+      
+  - Post-order: 
+  ` func PostOrderTraversal(node):
+      while node != None
+        PostOrderTraversal(node.left)
+        PostOrderTraversal(node.right)
+        visit(node)`
+* Binary Heaps
+
+- [Min-heap](): A complete binary tree where each node is smaller than its children. The root is the smallest element in the tree.
+  Operations: `insert` and `extract_min`, both takes O(log n) time.
+  
+- [Max-heap](): A complete binary tree where each node is larger than its children. The root is the largest element in the tree.
+  Operations: `insert` and `extract_min`, both takes O(log n) time.
+  
 * [Red Black Trees](https://github.com/amandazhuyilan/Castro-Street/blob/master/Data-Structures/LinkedList.py)
 
 * [Linked lists](https://github.com/amandazhuyilan/Castro-Street/blob/master/Data-Structures/LinkedList.py)
   - Loop detecting: 
 
 <a name="Sorting_Algorithms"></a>
-### Sorting Algorithms
+### Algorithms
 * [Counting Sort](https://github.com/amandazhuyilan/Castro-Street/blob/master/Algorithms/CountingSort.py)
   
   Sorting on O(n). Uses an auxiliary array that holds the number of elememts that equal to the index of Index_Arr. 
@@ -40,10 +75,15 @@ Catro Street consists of technical review notes of knowledge for data structures
   A divide, conquer and combine recursive sorting algorithm. Time complexity: O(n log(n)).
   
 ### Searching Algorithms 
-* [Breadth First Search](https://github.com/amandazhuyilan/Castro-Street/blob/master/Algorithms/BFS.py)
+- [Breadth First Search(BFS)](https://github.com/amandazhuyilan/Castro-Street/blob/master/Algorithms/BFS.py).
+  - Explore each neightbour before exploring any children. 
+  - Preferred if want to find shortest path between two nodes, as we wish to stay close to the starting node as close as possible.
+  - Can be implemented using recursive or queue.
 
-* [Depth First Search](https://github.com/amandazhuyilan/Castro-Street/blob/master/Algorithms/DFS.py)
-  
+-[Depth First Search](https://github.com/amandazhuyilan/Castro-Street/blob/master/Algorithms/DFS.py)
+  - Start at root or selected node and explore each branch completely before moving on to next branch.
+  - Preferred if want to visit all nodes in graph. Simpler compared to BFS.
+  - Tree Traversals mentioned above are a form of DFS.
 
 <a name="Problems_and_Solutions"></a>
 ## Problems and Solutions
@@ -72,6 +112,7 @@ Catro Street consists of technical review notes of knowledge for data structures
 3. [URLify](https://github.com/amandazhuyilan/Castro-Street/blob/master/URLify.py).
   
   Replaces the space(s) of input string.
+  
   `TEST_CASE = This is a string`
   
   Output: `This%20is%20%a%string`
@@ -79,6 +120,7 @@ Catro Street consists of technical review notes of knowledge for data structures
 4. [set Zeroes Matrix](https://github.com/amandazhuyilan/Castro-Street/blob/master/Problems-and-Solutions/setZeroMatrix.py).
   
   Given a m x n matrix, if an element is 0, set its entire row and column to 0. Do it in place.
+  
   `TEST_CASE = [[1, 2, 3], [5, 6, 0]]`
   
   Output:`[1, 2, 0], [0, 0, 0]`
