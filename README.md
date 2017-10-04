@@ -23,26 +23,26 @@ Catro Street consists of technical review notes of knowledge for data structures
   
   Binary Tree Traversals
   - In-order: 
-  ```
+    ```
     while node != None
       
         InOrderTraversal(node.left)
         
         visit(node)
         
-        InOrderTraversal(node.right)`
+        InOrderTraversal(node.right)
+    ```
      
   - Pre-order: 
-  ```
-  
-  while node != None
+    ```
+    while node != None
       
         visit(node)
         
         PreOrderTraversal(node.left)
         
         PreOrderTraversal(node.right)
-        ```
+    ```
       
   - Post-order: 
     ```
@@ -53,7 +53,7 @@ Catro Street consists of technical review notes of knowledge for data structures
         PostOrderTraversal(node.right)
         
         visit(node)
-        ```
+    ```
 
    - [Min-heap](): A complete binary tree where each node is smaller than its children. The root is the smallest element in the tree.
       Operations: `insert` and `extract_min`, both takes O(log n) time.
