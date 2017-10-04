@@ -55,14 +55,14 @@ Catro Street consists of technical review notes of knowledge for data structures
         PostOrderTraversal(node.left)
         
         PostOrderTraversal(node.right)
+        
         visit(node)`
-* Binary Heaps
 
-- [Min-heap](): A complete binary tree where each node is smaller than its children. The root is the smallest element in the tree.
-  Operations: `insert` and `extract_min`, both takes O(log n) time.
+   - [Min-heap](): A complete binary tree where each node is smaller than its children. The root is the smallest element in the tree.
+      Operations: `insert` and `extract_min`, both takes O(log n) time.
   
-- [Max-heap](): A complete binary tree where each node is larger than its children. The root is the largest element in the tree.
-  Operations: `insert` and `extract_min`, both takes O(log n) time.
+  - [Max-heap](): A complete binary tree where each node is larger than its children. The root is the largest element in the tree.
+    Operations: `insert` and `extract_min`, both takes O(log n) time.
   
 * [Red Black Trees](https://github.com/amandazhuyilan/Castro-Street/blob/master/Data-Structures/LinkedList.py)
 
