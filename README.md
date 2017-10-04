@@ -23,8 +23,8 @@ Catro Street consists of technical review notes of knowledge for data structures
   
   Binary Tree Traversals
   - In-order: 
-  
-  `  while node != None
+  ```
+    while node != None
       
         InOrderTraversal(node.left)
         
@@ -33,24 +33,27 @@ Catro Street consists of technical review notes of knowledge for data structures
         InOrderTraversal(node.right)`
      
   - Pre-order: 
-  `
-      while node != None
+  ```
+  
+  while node != None
       
         visit(node)
         
         PreOrderTraversal(node.left)
         
-        PreOrderTraversal(node.right)`
+        PreOrderTraversal(node.right)
+        ```
       
   - Post-order: 
-    `
+    ```
       while node != None
       
         PostOrderTraversal(node.left)
         
         PostOrderTraversal(node.right)
         
-        visit(node)`
+        visit(node)
+        ```
 
    - [Min-heap](): A complete binary tree where each node is smaller than its children. The root is the smallest element in the tree.
       Operations: `insert` and `extract_min`, both takes O(log n) time.
@@ -83,7 +86,7 @@ Catro Street consists of technical review notes of knowledge for data structures
   A divide, conquer and combine recursive sorting algorithm. Time complexity: O(n log(n)).
   
 ### Searching Algorithms 
-- [Breadth First Search(BFS)](https://github.com/amandazhuyilan/Castro-Street/blob/master/Algorithms/BFS.py).
+- [Breadth First Search(BFS)](https://github.com/amandazhuyilan/Castro-Street/blob/master/Algorithms/BFS.py)
   - Explore each neightbour before exploring any children. 
   - Preferred if want to find shortest path between two nodes, as we wish to stay close to the starting node as close as possible.
   - Can be implemented using recursive or queue.
@@ -95,7 +98,7 @@ Catro Street consists of technical review notes of knowledge for data structures
 
 <a name="Problems_and_Solutions"></a>
 ## Problems and Solutions
-1. [Two sums](https://github.com/amandazhuyilan/Castro-Street/blob/master/twoSums.py)
+1. [Two sums](https://github.com/amandazhuyilan/Castro-Street/blob/master/twoSums.py).
 
   Returns the indices of two numbers in the input array that add up to the target number.
 
