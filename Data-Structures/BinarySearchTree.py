@@ -27,16 +27,16 @@ class node:
 				else:
 					self.right.insert(data)
 
-				elif data < self.data:
-					if self.left is None:
-						self.left = node(data)
-					else: 
-						self.left.insert(data)
+			elif data < self.data:
+				if self.left is None:
+					self.left = node(data)
+				else: 
+					self.left.insert(data)
 
-				elif data == self.data:
-					print("Node already exists!")
-			else:
-				self.data = data
+			elif data == self.data:
+				print("Node already exists!")
+		else:
+			self.data = data
 
 # Lookup node with given data, do it recursively until find it. Returns 
 # node and its parent 
@@ -63,9 +63,9 @@ class node:
 		def count_children(self):
 			count = 0 
 			if self.left:
-				return count += 1
+				count += 1
 			if self.right:
-				return count += 1
+				count += 1
 			return count 
 
 			node, parent = self.lookup(data)
@@ -104,11 +104,34 @@ class node:
 						parent = successor
 						successor = successor.left
 					node.data = successor.data
-					if parent.left = successor:
+					if parent.left == successor:
 						parent.left = successor.right
 					else:
 						parent.right = successor.right
 
+# Use recursive to walk tree depth-first. Left subtree->Root->Right 
+# subtree	
+	def print_tree(self):
+		if self.left:
+			self.left.print_tree()
+		print self.data
+		if self.right:
+			self.right.print_tree()
 
+#Tests
+root = node(8)
+root.insert(3)
+root.insert(1)
+root.insert(6)
+root.insert(4)
+root.insert(7)
+root.insert(2)
+root.insert(5)
+root.insert(10)
+root.insert(14)
+root.insert(13)
+
+
+print(root.lookup(6))
 
 
