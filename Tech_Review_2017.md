@@ -51,6 +51,34 @@ Red Black trees is a balanced Binary Search tree with an extra bit per node-> ma
 - When the browser has finished loading all images, applets, etc. the page will be completely loaded in the browser window.
 
 ### Computer Systems
+#### Mutex, Locks, Sepamore and monitor
+- __Mutex__
+  An OS program object to allow multiple program thread to take turns sharing the same resource.
+- __Deadlocks__
+  Happens when multiple processes or threads waits for locks or resources held by other processes or threads.
+  - How to aviod: Lock Ranking.
+- __Semaphore__
+  An OS program object (counter). When the counter is positive, if a thread tries to acquire the semaphore then it is allowed, and the counter is decremented. When a thread is done it then releases the semaphore, and increments the counter. If the counter is already zero when a thread tries to acquire the semaphore then it has to wait until another thread releases the semaphore.
+  A binary semaphore is a mutex.
+  
+  - __Monitor__
+    A user-defined object/class designed for multiple thread access. Special type of semaphore. If one thread is currently executing a member function of the object then any other thread that tries to call a member function of that object will have to wait until the first has finished.
+  
+
+Mutex Structures:  
+  - Single-core:
+  ```
+  bool Locked = False      // determine if lock is locked/unlocked
+  queue waitlist           // list of process/threads to be run
+  ```
+  
+  - Multi-cores: 
+  ```
+  int spinlock            // a lock which causes a thread trying to acquire it to simply wait in a loop ("spin") while                                     repeatedly checking if the lock is available. 
+  bool Locked = False     
+  queue waitlist          
+  ```
+
 #### [Heaps and Stacks](http://net-informations.com/faq/net/stack-heap.htm)
 Stack is used for static memory allocation and heap for dynamic memory allocation, both stored in the computer's RAM .
 
