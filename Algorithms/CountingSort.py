@@ -21,7 +21,6 @@ def CountingSort(In_Arr):
 
 	return Out_Arr
 
-
 TEST_CASE = [2,3,1,5,4,4]
 
 print(CountingSort(TEST_CASE))
