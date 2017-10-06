@@ -25,4 +25,3 @@ def isUnique(input_str):
 
 TEST_CASE = "abd"
 print(isUnique(TEST_CASE))
-
