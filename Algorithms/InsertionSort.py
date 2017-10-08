@@ -30,5 +30,3 @@ TEST_CASE = [1,20,4,78]
 
 print (Insertion_Sort_Ascending(TEST_CASE))
 print (Insertion_Sort_Descending(TEST_CASE))
-
-

@@ -1,3 +1,6 @@
+# Splits array into half, sorts them by appending the smaller one of the two split arrays with the same index, and merge them back togther.
+# Runs in O(n log n).
+
 def Merge(left, right):
 	if not len(left) or not len(right):
 		return left or right
@@ -30,8 +33,6 @@ def MergeSort(list):
 	return Merge(left, right)
 
 
-
 TEST_CASE = [98, 3, 8, 5, 10, 9]
 
 print (MergeSort(TEST_CASE))
-
