@@ -64,7 +64,7 @@ Catro Street consists of technical review notes of knowledge for data structures
 * [Red Black Trees](https://github.com/amandazhuyilan/Castro-Street/blob/master/Data-Structures/LinkedList.py)
 
 * [Linked lists](https://github.com/amandazhuyilan/Castro-Street/blob/master/Data-Structures/LinkedList.py)
-  - Loop detecting: 
+  - [Loop detecting](https://github.com/amandazhuyilan/Castro-Street/blob/master/Problems-and-Solutions/hasLoop.py): Uses          Floyd's hare-and-turtle algorithm, make a fast pointer that travels in two nodes at a time, and a slow pointer that            travels one node at a time. If there exists a loop in the linked-list, fast and slow will meet. 
 
 <a name="Sorting_Algorithms"></a>
 ### Algorithms
