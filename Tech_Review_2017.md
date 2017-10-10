@@ -1,6 +1,8 @@
 # Technical Review Notes
 Credits for _Cracking the Code Interview, 6th edition_ and _Data Structure and Algorithms in Python_. 
 
+## Good code
+Need to pass [CWE MITRE top 25] errors(http://cwe.mitre.org/top25/).
 
 ## Time/Space Complexity
 
