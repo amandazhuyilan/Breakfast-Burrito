@@ -1,4 +1,4 @@
-Catro Street consists of technical review notes of knowledge for data structures, algorithms and essential computer knowledge. Solved questions completed in Python 3 from the [Green Bible](https://www.amazon.com/Cracking-Coding-Interview-Programming-Questions/dp/0984782850/ref=sr_1_1?ie=UTF8&qid=1505751073&sr=8-1&keywords=crack+the+coding+interview) and [Leetcode](http://www.leetcode.com) would be available. This readme consists of a list of links to the contents of the repo.
+Catro Street consists of technical review notes of knowledge for data structures, algorithms and essential computer knowledge. Solved questions completed in Python 3 from [Cracking the Code Interview](https://www.amazon.com/Cracking-Coding-Interview-Programming-Questions/dp/0984782850/ref=sr_1_1?ie=UTF8&qid=1505751073&sr=8-1&keywords=crack+the+coding+interview) and [Leetcode](http://www.leetcode.com) would be available. This readme consists of a list of links to the contents of the repo.
 
 ## Table of Contents 
 [Technical Review Notes](https://github.com/amandazhuyilan/Castro-Street/edit/master/Tech_Review_2017.md)
