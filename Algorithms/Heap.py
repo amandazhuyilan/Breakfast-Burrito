@@ -7,45 +7,43 @@
 # as 2*i + 2.
 
 # Implementing a max heap
-def heapify(In_Arr, HeapSize, index):
+def MaxHeapify(In_Arr, index):
 	largest = index
 	left = 2 * index + 1
 	right = 2 * index + 2
 
-	if left < HeapSize and In_Arr[index] < In_Arr[left]:
+	if left < len(In_Arr) and In_Arr[largest] < In_Arr[left]:
 		largest = left
-	if right < HeapSize and In_Arr[index] < In_Arr[right]:
+	if right < len(In_Arr) and In_Arr[largest] < In_Arr[right]:
 		largest = right
 
 	if largest != index:
 		In_Arr[index], In_Arr[largest] = In_Arr[largest], In_Arr[index]
-		heapify(In_Arr, HeapSize, largest)
-		
-def HeapSort(In_Arr):
+		MaxHeapify(In_Arr, largest)
+
+def MaxHeapSort(In_Arr):
 	N = len(In_Arr)
 
 	# build a max heap
-	for i in range(N, -1, -1):
-		heapify(In_Arr, N, i)
+	for i in range(N//2, -1, -1):
+		MaxHeapify(In_Arr, i)
 
-	# Extract elements one by one 
-	for i in range(N-1, 0, -1):
-		In_Arr[i], In_Arr[0] = In_Arr[0], In_Arr[i]
-		heapify(In_Arr, i, 0)
+	# putting the elements in descending order
+	for i in range(1, len(In_Arr), 2):
+		if In_Arr[i] < In_Arr[i + 1]:
+			In_Arr[i] , In_Arr[i + 1] = In_Arr[i + 1] , In_Arr[i]
 
 	return In_Arr
 
 TEST_CASE = [5, 7, 8, 19, 2]
-print("Heap sort the good old way: ")
-print(HeapSort(TEST_CASE))
-
+print(MaxHeapSort(TEST_CASE))
 
 # Can also use heapq module (kinda cheating though :/)
 import heapq
 
 test_list = [5, 7, 8, 19, 2]
 
-# heapify: convert list into heap. In place, linear time.
+# heapify: convert list into min-heap. In place, linear time.
 heapq.heapify(test_list)
 print("heapified list: ")
 print(list(test_list))
