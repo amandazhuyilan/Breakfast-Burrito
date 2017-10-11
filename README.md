@@ -145,3 +145,4 @@ Castro Street consists of technical review notes of knowledge for data structure
   - [HTML](http://www.simplehtmlguide.com/cheatsheet.php)
   - Regex. [Interactive Tutorial](https://regexone.com/) and [Online Regex Testing](https://regex101.com/).
   - [How does the internet works?](https://web.stanford.edu/class/msande91si/www-spr04/readings/week1/InternetWhitepaper.htm)
+  - [MIT Handouts _Hacking a Google Interview-](http://courses.csail.mit.edu/iap/interview/materials.php)
