@@ -1,8 +1,19 @@
 # Technical Review Notes
 Credits for _Cracking the Code Interview, 6th edition_ and _Data Structure and Algorithms in Python_. 
 
-## Good code
-Need to pass [CWE MITRE top 25](http://cwe.mitre.org/top25/) errors.
+## Clean code. Written by someone who cares.
+Need to pass [CWE MITRE top 25 errors.](http://cwe.mitre.org/top25/) 
+
+- __Single Responsibility Principle__. A function should be responsible for a single aspect of a system's requirements，which can be changed independently of other aspects. Should have minimal dependencies.
+
+- __Don't Repeat Yourself__. The modification of any single element of a system doesn't require a change in any other logically unrelated elements.
+
+- __Keep It Simple and Stupid__. Most system works best if they are kept simple rather than made complex.
+
+- Can be easily extended by any other developer. Be mindful and considerate. You might be the "other debveloper" some day.
+
+- Should have unit and acceptance tests.
+
 
 ## Time/Space Complexity
 
