@@ -236,7 +236,47 @@ Stack is used for static memory allocation and heap for dynamic memory allocatio
   - In a multi-threaded situation each thread will have its own completely independent stack but they will share the heap.        Stack is thread specific and heap is application specific. The stack is important to consider in exception handling and        thread executions.
   
 #### Segmentation Fault
-  A segmentation fault is when your program attempts to access memory it has either not been assigned by the operating system,   or is otherwise not allowed to access.
+An error caused when not allocating memory for some routines calls which requires ```malloc()```. 
+A fancy term for: YOU DID SOMETHING WRONG WITH MEMORY YOU FOOLISH PROGRAMMER AND I AM ANGRY.
+
+#### Buffer Overflow
+A related error for not allocating enough memory. In some cases this is harmless, perhaps
+overwriting a variable that isn’t used anymore. In some cases, these over-
+flows can be incredibly harmful, and in fact are the source of many security
+vulnerabilities in systems.
+
+#### Memory leak
+Occurs when you forget to free memory. In long-running applications or systems (such
+as the OS itself), this is a huge problem, as slowly leaking memory eventually
+leads one to run out of memory, at which point a restart is required.
+
+__WHY NO MEMORY IS LEAKED ONCE YOUR PROCESS EXITS__
+
+When you write a short-lived program, you might allocate some space
+using ```malloc()```. The program runs and is about to complete: is there
+need to call ```free()``` a bunch of times just before exiting? While it seems
+wrong not to, no memory will be “lost” in any real sense. The reason is
+simple: there are really two levels of memory management in the system.
+
+The first level of memory management is performed by the OS, which
+hands out memory to processes when they run, and takes it back when
+processes exit (or otherwise die). The second level of management
+is within each process, for example within the heap when you call
+```malloc()``` and ```free()```. Even if you fail to call ```free()``` (and thus leak
+memory in the heap), the operating system will reclaim all the memory of
+the process (including those pages for code, stack, and, as relevant here,
+heap) when the program is finished running. No matter what the state
+of your heap in your address space, the OS takes back all of those pages
+when the process dies, thus ensuring that no memory is lost despite the
+fact that you didn’t free it.
+
+Thus, for short-lived programs, leaking memory often does not cause any
+operational problems (though it may be considered poor form). When
+you write a long-running server (such as a web server or database management
+system, which never exit), leaked memory is a much bigger issue,
+and will eventually lead to a crash when the application runs out of
+memory. And of course, leaking memory is an even larger issue inside
+one particular program: the operating system itself. 
   
 #### Stack Overflow
 - When a particular computer program tries to use more memory space than the call stack has available.
