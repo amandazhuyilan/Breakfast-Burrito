@@ -234,7 +234,9 @@ Stack is used for static memory allocation and heap for dynamic memory allocatio
   - Use stack if exactly how much data needed to allocate is known before compile time and it is not too big.	Use heap if       don't know exactly how much data needed at runtime or need to allocate a lot of data.
 
   - In a multi-threaded situation each thread will have its own completely independent stack but they will share the heap.        Stack is thread specific and heap is application specific. The stack is important to consider in exception handling and        thread executions.
-  
+
+The following content is taken out from [_Operating Systems: Three Easy Pieces_](http://pages.cs.wisc.edu/~remzi/OSTEP/#book-chapters) by Remzi H. Arpaci-Dusseau and Andrea C. Arpaci-Dusseau.
+
 #### Segmentation Fault
 An error caused when not allocating memory for some routines calls which requires ```malloc()```. 
 A fancy term for: YOU DID SOMETHING WRONG WITH MEMORY YOU FOOLISH PROGRAMMER AND I AM ANGRY.
