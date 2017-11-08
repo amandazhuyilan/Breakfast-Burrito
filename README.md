@@ -101,42 +101,15 @@ Castro Street consists of technical review notes of knowledge for data structure
 <a name="Problems_and_Solutions"></a>
 ## Problems and Solutions
 1. [Two sums](https://github.com/amandazhuyilan/Castro-Street/blob/master/twoSums.py).
-
-  Returns the indices of two numbers in the input array that add up to the target number.
-
-  * Solution 1: Brute force, O(n<sup>2</sup>) 
-  * Solution 2: Dictionary. O(n). Set buffer_dictionary[target-nums[i]] = i if nums[i] not in buffer dictionary.  
-  
-  `TEST_CASE = ([1,4,5,10,3], 7)`
-  
-  Output: `[1,4]`
   
 2. [Is Unique](https://github.com/amandazhuyilan/Castro-Street/blob/master/isUnique.py).
   
-  Checks if the characters in the input string is unique. O(n).
-  
-  Create a empty list and append the ASCII vaule for each character in string after checking if the ASCII value already     exists. If exists, return `False`, else return `True`
-
-  
-  `TEST_CASE = "abd"`
-  
-  Output: `True`
-  
 3. [URLify](https://github.com/amandazhuyilan/Castro-Street/blob/master/URLify.py).
-  
-  Replaces the space(s) of input string.
-  
-  `TEST_CASE = This is a string`
-  
-  Output: `This%20is%20%a%string`
-  
+ 
 4. [set Zeroes Matrix](https://github.com/amandazhuyilan/Castro-Street/blob/master/Problems-and-Solutions/setZeroMatrix.py).
   
-  Given a m x n matrix, if an element is 0, set its entire row and column to 0. Do it in place.
-  
-  `TEST_CASE = [[1, 2, 3], [5, 6, 0]]`
-  
-  Output:`[1, 2, 0], [0, 0, 0]`
+5. [SurroundedRegions](https://github.com/amandazhuyilan/Castro-Street/blob/master/Problems-and-Solutions/SurroundedRegions.py)
+
   
 <a name= "Cheat_Sheets"></a>
 ### Cheat Sheets
