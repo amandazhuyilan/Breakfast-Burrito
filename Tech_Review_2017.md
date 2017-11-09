@@ -19,6 +19,8 @@ Need to pass [CWE MITRE top 25 errors.](http://cwe.mitre.org/top25/)
 
 ## Time/Space Complexity
 
+Metrics used to descripe the efficiency of algorithms.
+
 ### Big-O, Big-Ω, Big-Θ and Little-O
 - T(n) is O(f(n)) = growth rate of T(n) <= growth rate of f(n) _Upper Bound_
 - T(n) is Ω(f(n)) = growth rate of T(n) >= growth rate of f(n) _Lower Bound_
