@@ -26,7 +26,7 @@ def MergeSort(list):
 	if len(list) < 2:
 		return list
 
-	middle = len(list)/2
+	middle = len(list)//2
 	left = MergeSort(list[:middle])
 	right = MergeSort(list[middle:])
 
