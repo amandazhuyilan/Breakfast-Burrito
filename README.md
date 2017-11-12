@@ -67,7 +67,14 @@ Castro Street consists of technical review notes of knowledge for data structure
 
 * [Linked lists](https://github.com/amandazhuyilan/Castro-Street/blob/master/Data-Structures/LinkedList.py)
   - [Loop detecting](https://github.com/amandazhuyilan/Castro-Street/blob/master/Problems-and-Solutions/hasLoop.py): Uses          Floyd's hare-and-turtle algorithm, make a fast pointer that travels in two nodes at a time, and a slow pointer that            travels one node at a time. If there exists a loop in the linked-list, fast and slow will meet. 
+* [Graphs](https://github.com/amandazhuyilan/Castro-Street/blob/master/Data-Structures/graph.py)
 
+  Constructing a graph in an adjacency list format with ```defaultdict``` (when adding an edge for not existing vertex, this will not throw KeyError exception like the normal dictionary function, but will just create a new vertex along with this edge).
+  
+  - BFS for graphs: By implementing a queue and a ```visited``` list to keep track of if the nodes of a vertex, starting with the source, BFS prints out the neighbouring nodes of the vertex and moves on to the next one by popping the queue.
+  
+  - DFS for graphs: Using a recrusive function in the ```DFS_helper``` function, we go down the vertex starting from teh source and prints all the vertices that are not included in the ```visited``` list.
+  
 <a name="Sorting_Algorithms"></a>
 ### Algorithms
 * [Counting Sort](https://github.com/amandazhuyilan/Castro-Street/blob/master/Algorithms/CountingSort.py)
