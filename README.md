@@ -86,6 +86,8 @@ Castro Street consists of technical review notes of knowledge for data structure
 
 * [Quick Sort](https://github.com/amandazhuyilan/Castro-Street/blob/master/Algorithms/QuickSort.py)
 
+  In-place and non-in-place methods included. Sorts in O(n log n).
+
 * [Insertion Sort](https://github.com/amandazhuyilan/Castro-Street/blob/master/Algorithms/InsertionSort.py)
 
   An efficient algorithm for sorting a small number of elements. Time complexity: Best O(n), Worst: O(n<sup>2</sup>).
