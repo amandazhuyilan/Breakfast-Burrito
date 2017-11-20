@@ -8,3 +8,12 @@
 
 ```char * envp[]``` holds environment variables as string constants, plus the header: ```PATH=```. 3rd formal and optional parameter of ```main()```.
 
+#### Pointers
+
+```&``` is the address-of operator, and can be read simply as "the address of".
+
+```*``` is the dereference operator, and can be read as "value pointed to by".
+
+[Tutorials from cplusplus.com](http://www.cplusplus.com/doc/tutorial/pointers/) about pointers.
+
+
