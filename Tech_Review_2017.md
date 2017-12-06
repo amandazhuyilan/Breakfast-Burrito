@@ -221,6 +221,9 @@ The ability of one method to have different behaviours depending on the type of 
 
 Example: the ```add``` function would result in different behaviour depending on the type of input(int/float/double and string)
 
+#### Memory Layout Diagram
+![Memory Layout](http://static.duartes.org/img/blogPosts/linuxFlexibleAddressSpaceLayout.png)
+
 #### [Heaps and Stacks](http://net-informations.com/faq/net/stack-heap.htm)
 Stack is used for static memory allocation and heap for dynamic memory allocation, both stored in the computer's RAM .
 
