@@ -226,12 +226,17 @@ Stack is used for static memory allocation and heap for dynamic memory allocatio
 
 - __Stack__
 
-  Variables allocated on the stack are stored directly to the memory and access to this memory is therefore fast, and it's       allocation happens when the program is compiled. 
-  When a function or a method calls another function which in turns calls another function etc., the execution of all those     functions remains suspended until the very last function returns its value. The stack is always reserved in a LIFO order,     the most recently reserved block is always the next block to be freed. This makes it really simple to keep track of the       stack, freeing a block from the stack is nothing more than adjusting one pointer.
+The most straightforward way LIFO stacks may be programmed into conventional computers is to allocate an array in memory, and keep a variable with the array index number of the topmost active element. Blocks of memory locations can be allocated and a pointer (%esp) with the actual address of the top stack element is used to maintain and keep track of the topmost element.
+
+A very important property of stacks is that, in their purest form, they only allow access to the top element in the data structure. They allow recursive invocations of procedures without risk of destroying data from previous invocations of the routine.
+
+Variables allocated on the stack are stored directly to the memory and access to this memory is therefore fast, and it's       allocation happens when the program is compiled. 
+
+The stack is always reserved in a LIFO order, the most recently reserved block is always the next block to be freed. This makes it really simple to keep track of the stack, freeing a block from the stack is nothing more than adjusting one pointer.
 
 - __Heap__
 
-  Variables allocated on the heap have their memory allocated at run time and accessing this memory is a bit slower, but the     heap size is only limited by the size of virtual memory . Element of the heap have no dependencies with each other and can     always be accessed randomly at any time. You can allocate a block at any time and free it at any time. This makes it much     more complex to keep track of which parts of the heap are allocated or free at any given time.
+Variables allocated on the heap have their memory allocated at run time and accessing this memory is a bit slower, but the     heap size is only limited by the size of virtual memory . Element of the heap have no dependencies with each other and can     always be accessed randomly at any time. You can allocate a block at any time and free it at any time. This makes it much     more complex to keep track of which parts of the heap are allocated or free at any given time.
 
   - Use stack if exactly how much data needed to allocate is known before compile time and it is not too big.	Use heap if       don't know exactly how much data needed at runtime or need to allocate a lot of data.
 
