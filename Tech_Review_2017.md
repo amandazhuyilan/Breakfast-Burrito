@@ -223,6 +223,7 @@ Example: the ```add``` function would result in different behaviour depending on
 
 #### Memory Layout Diagram
 ![Memory Layout](http://static.duartes.org/img/blogPosts/linuxFlexibleAddressSpaceLayout.png)
+![Memory Layout from class](https://github.com/amandazhuyilan/Castro-Street/blob/master/Memory%20Layout.JPG)
 
 #### [Heaps and Stacks](http://net-informations.com/faq/net/stack-heap.htm)
 Stack is used for static memory allocation and heap for dynamic memory allocation, both stored in the computer's RAM .
