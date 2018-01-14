@@ -1,7 +1,30 @@
 # Technical Review Notes
-Credits for _Cracking the Code Interview, 6th edition_ and _Data Structure and Algorithms in Python_. 
+### Table of Contents
+[Clean and Good Code?](#Clean_Code)
 
-### Clean code. 
+[Time Complexity](#Time_Complexity)
+Data Structure and Algorithms
+  - [Hash Tables](#Hash_Tables)
+  - [ASCII and UNICODE](#ASCII_and_UNICODE)
+  - [Binary Search Trees](#Binary_Search_Trees)
+  - [Queues and Stacks](#Queues_and_Stacks)
+  - [Bitwise Operations](#Bitwise_Operations)
+  
+[Network](#Network)
+
+[Computer Systems Knowledge](#Computer_Systems)
+  - [Mutex, Locks, Sepamore and Monitor](#mutex)
+  - [Polymorphism](#Polymorphism)
+  - [Heaps and Stacks](#Heaps_and_Stacks)
+  - [Memory Layout Diagrams](#Memory_Layout)
+  - [Common Errors](#Common_Errors)
+    - [Segmentation Fault](#Segmentation_Fault)
+    - [Buffer Overflow](#Buffer_Overflow)
+    - [Memory Leak](#Memory_Leak)
+    - [Stack Overflow](#Stack_Overflow)
+
+<a name="Clean_Code"></a>
+### Clean and Good Code?
 Written by someone who cares.
 
 Need to pass [CWE MITRE top 25 errors.](http://cwe.mitre.org/top25/) 
@@ -16,7 +39,7 @@ Need to pass [CWE MITRE top 25 errors.](http://cwe.mitre.org/top25/)
 
 - Should have unit and acceptance tests.
 
-
+<a name="Time_Complexity"></a>
 ## Time/Space Complexity
 
 Metrics used to descripe the efficiency of algorithms.
@@ -29,6 +52,7 @@ Metrics used to descripe the efficiency of algorithms.
 
 An __in-place__ algorithm operates directly on its input and changes it, instead of creating and returning a new object. 
 
+<a name="Hash_Tables"></a>
 ### Hash Tables
 Hash tables are used to associate key with values, each key should be able to compute a "hash function", which takes some or all information and digests it into a single integer.
 
@@ -42,13 +66,14 @@ Insertion, removal and lookup takes O(1) time, worst case takes O(n) time.
   - For strings from input, sort them and lookup the keys in the table, add if not exists or add to value if exists.
   - Runs in O(n log n) for sorting and O(1) for lookup.
   
- 
+<a name="ASCII_and_UNICODE"></a>
 ### ASCII and UNICODE 
 ASCII defines 128 characters,mapping to 0-127 characters. Unicode defines 2<sup>21</sup> characters.
 Unicode is a superset of ASCII, and the numbers 0–128 have the same meaning in ASCII as they have in Unicode.
 
 Because Unicode characters don't generally fit into one 8-bit byte, there are numerous ways of storing Unicode characters in byte sequences, such as UTF-32 and UTF-8.
 
+<a name="Binary_Search_Trees"></a>
 ### Binary Search Trees
 - BST Operations are usuallty O(log n). 
 - Can be implemented as Hash table by storing <key, value> pairs and order nodes based on keys.
@@ -57,6 +82,8 @@ Shortest path between two nodes in a BST: Find the _lowest common ancestor_.
 - Keep track of the start node and destination node in two sets.
 - Move up the tree and find the parent of the node, store it in the same set correspondingly.
 - The unique path is found once the entry to the two sets are identical.
+
+<a name="Queues_and_Stacks"></a>
 ### Queues and Stacks
 #### Stacks
 LIFO. Used for tracing back to previous elements or operations.
@@ -151,7 +178,8 @@ deQueue(q)
   3) Pop the element from stack2 and return it.
 ```
   
-### Bitwise Operation
+<a name="Bitwise_Operations"></a>  
+### Bitwise Operations
 __Two's Complement__: Take the inverse of the binary form and add 1.
 In Python:
 - x << y => x shifting to the left by y places (multiplying by 2y).
@@ -161,7 +189,7 @@ In Python:
 - x      => returns the complement of x. (-x - 1).
 - x ^ y  => bitwise XOR. 
 
-  
+<a name="Network"></a>  
 ### Network
 #### When you type a URL into a web browser, this is what happens:
 - If the URL contains a domain name, the browser first connects to a domain name server and retrieves the corresponding IP address for the web server.
@@ -172,11 +200,12 @@ In Python:
 - For each element needed, the browser makes additional connections and HTTP requests to the server for each element.
 - When the browser has finished loading all images, applets, etc. the page will be completely loaded in the browser window.
 
-### Computer Systems
+<a name="Computer_Systems"></a>
+### Computer Systems Knowledge
 Each __process__ has one or more __threads__, the processor switches between threads quickly, only one thread is running at given time. 
 
-__Context Switching__: CPU storing and restoring the 
-#### Mutex, Locks, Sepamore and monitor
+<a name="mutex"></a>
+#### Mutex, Locks, Sepamore and Monitor
 - __Mutex__
 
   An OS program object (counter) to allow multiple program thread to take turns sharing the same resource.
@@ -216,15 +245,18 @@ A situation when a thread is waiting for an object lock that another thread hold
   4. Circular Wait: Two or more processes form a circular chain where each process is waiting on another resource in the                           chain.
 Deadlock prevention: Locks ranking.
 
+<a name="Polymorphism"></a>
 #### Polymorphism
 The ability of one method to have different behaviours depending on the type of object it is being called on or the type of object being passed as the parameter.
 
 Example: the ```add``` function would result in different behaviour depending on the type of input(int/float/double and string)
 
+<a name="Memory_Layout"></a>
 #### Memory Layout Diagram
 ![Memory Layout](http://static.duartes.org/img/blogPosts/linuxFlexibleAddressSpaceLayout.png)
 ![Memory Layout from class](https://github.com/amandazhuyilan/Castro-Street/blob/master/Memory%20Layout.JPG)
 
+<a name="Heaps_and_Stacks"></a>
 #### [Heaps and Stacks](http://net-informations.com/faq/net/stack-heap.htm)
 Stack is used for static memory allocation and heap for dynamic memory allocation, both stored in the computer's RAM .
 
@@ -248,22 +280,26 @@ Variables allocated on the heap have their memory allocated at run time and acce
 
 The following content is taken out from [_Operating Systems: Three Easy Pieces_](http://pages.cs.wisc.edu/~remzi/OSTEP/#book-chapters) by Remzi H. Arpaci-Dusseau and Andrea C. Arpaci-Dusseau.
 
+<a name="Common_Errors"></a>
+### Common Errors
+
+<a name="Segmentation_Fault"></a>
 #### Segmentation Fault
 An error caused when not allocating memory for some routines calls which requires ```malloc()```. 
-A fancy term for: YOU DID SOMETHING WRONG WITH MEMORY YOU FOOLISH PROGRAMMER AND I AM ANGRY.
 
+<a name="Buffer Overflow"></a>
 #### Buffer Overflow
 A related error for not allocating enough memory. In some cases this is harmless, perhaps
 overwriting a variable that isn’t used anymore. In some cases, these over-
 flows can be incredibly harmful, and in fact are the source of many security
 vulnerabilities in systems.
 
+<a name="Memory_Leak"></a>
 #### Memory leak
-Occurs when you forget to free memory. In long-running applications or systems (such
-as the OS itself), this is a huge problem, as slowly leaking memory eventually
-leads one to run out of memory, at which point a restart is required.
+Happens when memory that is allocated, then unused but never freed. The device should work indefinitely, without ever needing a reboot, but this will slowly leak memory eventually
+leads to running out of memory, at which point a restart is required.
 
-__WHY NO MEMORY IS LEAKED ONCE YOUR PROCESS EXITS__
+##### Reasons for memoy leaks:
 
 When you write a short-lived program, you might allocate some space
 using ```malloc()```. The program runs and is about to complete: is there
@@ -291,7 +327,9 @@ and will eventually lead to a crash when the application runs out of
 memory. And of course, leaking memory is an even larger issue inside
 one particular program: the operating system itself. 
   
+<a name="Stack_Overflow"></a>  
 #### Stack Overflow
-- When a particular computer program tries to use more memory space than the call stack has available.
-- Happens during excessively deep or infinite recursion, in which a function calls itself so many times that the space needed to store the variables and information associated with each call is more than can fit on the stack. Can also happen when large stack variables are allocated.
+When a particular computer program tries to use more memory space than the call stack has available.
+
+Happens during excessively deep or infinite recursion, in which a function calls itself so many times that the space needed to store the variables and information associated with each call is more than can fit on the stack. Can also happen when large stack variables are allocated.
 
