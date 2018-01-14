@@ -3,6 +3,7 @@
 [Clean and Good Code?](#Clean_Code)
 
 [Time Complexity](#Time_Complexity)
+
 Data Structure and Algorithms
   - [Hash Tables](#Hash_Tables)
   - [ASCII and UNICODE](#ASCII_and_UNICODE)
@@ -381,7 +382,7 @@ The following content is taken out from [_Operating Systems: Three Easy Pieces_]
 #### Segmentation Fault
 An error caused when not allocating memory for some routines calls which requires ```malloc()```. 
 
-<a name="Buffer Overflow"></a>
+<a name="Buffer_Overflow"></a>
 #### Buffer Overflow
 A related error for not allocating enough memory. In some cases this is harmless, perhaps
 overwriting a variable that isn’t used anymore. In some cases, these over-
