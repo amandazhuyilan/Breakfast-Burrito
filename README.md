@@ -81,7 +81,7 @@ Because Unicode characters don't generally fit into one 8-bit byte, there are nu
 
 <a name="Binary_Search_Trees"></a>
 
-###[Binary Search Trees](https://github.com/amandazhuyilan/Castro-Street/blob/master/Data-Structures/BinarySearchTree.py)
+### [Binary Search Trees](https://github.com/amandazhuyilan/Castro-Street/blob/master/Data-Structures/BinarySearchTree.py)
   - A binary search tree is a binary tree in which all left decendents <= n <= all right decendents.
   - BST Operations are usuallty O(log n). 
   - Complete binary tree: every level is filled except for perhaps the last level.
