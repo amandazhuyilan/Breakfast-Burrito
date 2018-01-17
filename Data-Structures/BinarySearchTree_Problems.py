@@ -15,6 +15,16 @@ def maxDepth(node):
 		return 0
 	else:
 		return max(maxDepth(node.left), maxDepth(node.right))+ 1
+def minDepth(node):
+	if node == None:
+		return 0
+	if node.left is None and node.right is None:
+		return 1
+	if node.left is None:
+		return minDepth(node.right) + 1
+	if node.right is None:
+		return minDepth(node.left) + 1
+	return min(minDepth(node.right), minDepth(node.right)) + 1
 
 def preorder(root):
 	if root != None:
@@ -27,8 +37,11 @@ root.left = Node(2)
 root.right = Node(3)
 root.left.left = Node(4)
 root.left.right = Node(5)
+root.left.left.left = Node(6)
+root.right.right.right.right = Node(7)
 
 print ("Size of the tree is %d" %(size(root)))
 print ("Max depth of the tree is", maxDepth(root))
+print ("Min depth of the tree is", minDepth(root))
 print("Preorder:", preorder(root))
 
