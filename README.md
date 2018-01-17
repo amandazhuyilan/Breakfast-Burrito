@@ -81,6 +81,24 @@ Because Unicode characters don't generally fit into one 8-bit byte, there are nu
 
 <a name="Binary_Search_Trees"></a>
 
+### Binary Search
+
+Let's assume we want to find a target number in an array of ints in ```nums```:
+
+```python
+def BinarySearch(self, startIndex, endIndex, nums, target):
+  while startIndex <= endIndex:
+    mid = (startIndex + endIndex)//2
+    if nums[mid] == target:
+      return True
+    elif nums[mid] > target:
+      return self.BinarySearch(startIndex, mid - 1, nums, target)
+    elif nums[mid] < target:
+      return self.BinarySearch(startIndex, mid + 1, nums, target)
+  return False
+  ```
+  
+
 ### [Binary Search Trees](https://github.com/amandazhuyilan/Castro-Street/blob/master/Data-Structures/BinarySearchTree.py)
   - A binary search tree is a binary tree in which all left decendents <= n <= all right decendents.
   - BST Operations are usuallty O(log n). 
