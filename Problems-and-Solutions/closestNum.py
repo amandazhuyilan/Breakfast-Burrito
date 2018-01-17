@@ -1,36 +1,23 @@
 class Solution:
-    """
-    @param: A: an integer array sorted in ascending order
-    @param: target: An integer
-    @return: an integer
-    """
-    def closestNumber(self, A, target):
-        # write your code here
-            if len(A) == None:
-                return -1
-
-            if target - 1 > A[-1] or target + 1 < A[0]:
-                return -1
-
-            result = self.BinarySearch(0,len(A), A, target)
-            return result
-    
-    def BinarySearch(self,startIndex, endIndex, A, target):
-        if startIndex > endIndex:
+    def closestNum(self, A, target):
+        if len(A) == 0 or target == None:
             return -1
-            
-        mid = (startIndex + endIndex)//2
-        if target == A[mid]:
-            return mid
-        
-        if target + 1 == A[mid] or target - 1 == A[mid]:
-            return mid
-            
-        if target + 1 > A[mid]:
-            return self.BinarySearch(mid, endIndex, A, target)
+        startIndex = 0
+        endIndex = len(A) - 1
 
-        if target - 1 < A[mid]:
-            return self.BinarySearch(startIndex, mid, A, target)
-            
+        while(startIndex + 1 < endIndex):
+            mid = (startIndex + endIndex)//2
 
-print(Solution().closestNumber([1,4,6,10,20],21))
+            if target == A[mid]:
+                return mid
+            elif target < A[mid]:
+                endIndex = mid
+            elif target > A[mid]:
+                startIndex = mid
+
+        if abs(target-A[startIndex]) < abs(target-A[endIndex]):
+            return startIndex
+        else:
+            return endIndex
+
+print(Solution().closestNum([1,3,4,8],6)) 
