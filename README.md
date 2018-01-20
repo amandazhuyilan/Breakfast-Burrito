@@ -7,6 +7,7 @@
 Data Structure and Algorithms
   - [Hash Tables](#Hash_Tables)
   - [ASCII and UNICODE](#ASCII_and_UNICODE)
+  - [Binary Search](#Binary_Search)
   - [Binary Search Trees](#Binary_Search_Trees)
   - [Linked List and Graphs](#Linked_List_and_Graphs)
   - [Queues and Stacks](#Queues_and_Stacks)
@@ -79,15 +80,15 @@ Unicode is a superset of ASCII, and the numbers 0–128 have the same meaning in
 
 Because Unicode characters don't generally fit into one 8-bit byte, there are numerous ways of storing Unicode characters in byte sequences, such as UTF-32 and UTF-8.
 
-<a name="Binary_Search_Trees"></a>
 
+<a name="Binary_Search"></a>
 ### Binary Search
 
 Let's assume we want to find a target number in an array of ints in ```nums```:
 
 ```python
 def BinarySearch(self, startIndex, endIndex, nums, target):
-  while startIndex <= endIndex:
+  while startIndex + 1 < endIndex:
     mid = (startIndex + endIndex)//2
     if nums[mid] == target:
       return True
@@ -98,7 +99,7 @@ def BinarySearch(self, startIndex, endIndex, nums, target):
   return False
   ```
   
-
+<a name="Binary_Search_Trees"></a>
 ### [Binary Search Trees](https://github.com/amandazhuyilan/Castro-Street/blob/master/Data-Structures/BinarySearchTree.py)
   - A binary search tree is a binary tree in which all left decendents <= n <= all right decendents.
   - BST Operations are usuallty O(log n). 
