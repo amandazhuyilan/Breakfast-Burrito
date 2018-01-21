@@ -102,11 +102,9 @@ def BinarySearch(self, startIndex, endIndex, nums, target):
 <a name="Binary_Search_Trees"></a>
 ### [Binary Search Trees](https://github.com/amandazhuyilan/Castro-Street/blob/master/Data-Structures/BinarySearchTree.py)
   - A binary search tree is a binary tree in which all left decendents <= n <= all right decendents.
-  - BST Operations are usuallty O(log n). 
+  - BST Operations are usuallty O(log n). The length of a balanced BST is log n, worst case scenario is n.
   - Complete binary tree: every level is filled except for perhaps the last level.
-  - Full binary tree: every node has zero or two children.
-  - Perfect binary tree: both full and complete.
-  
+ 
   Binary Tree Traversals
   - In-order: 
     ```
