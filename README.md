@@ -95,7 +95,7 @@ def BinarySearch(self, startIndex, endIndex, nums, target):
     elif nums[mid] > target:
       return self.BinarySearch(startIndex, mid - 1, nums, target)
     elif nums[mid] < target:
-      return self.BinarySearch(startIndex, mid + 1, nums, target)
+      return self.BinarySearch(mid + 1, endIndex, nums, target)
   return False
   ```
   
