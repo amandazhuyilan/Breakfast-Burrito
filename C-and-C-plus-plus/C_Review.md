@@ -16,4 +16,21 @@
 
 [Tutorials from cplusplus.com](http://www.cplusplus.com/doc/tutorial/pointers/) about pointers.
 
+```int * p``` -> initalizing a memory space at 0X0112 and setting it as NULL
+
+```p = new int(12) ``` -> initalizing a new memory space at memory location 0X2222 and setting it as 12
+
+```cout << p ``` -> will print 0x2222
+
+```cout << &p ``` -> will print 0x0112
+
+```cout << *p ``` -> will print 12
+
+When deleting a pointer:
+
+```delete p``` -> will delete 12 in 0x2222
+
+``` p = NULL``` -> not necessary, will set 0x0112 to NULL
+
+
 
