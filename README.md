@@ -29,10 +29,8 @@ Data Structure and Algorithms
 [Cheat Sheets](#Cheat_Sheets)  
 
 Python main template:
-```python
- 
+```python 
 #!/usr/bin/env python
-# -*- coding: utf-8 -*-
 
 def main():
     """ Main program """
