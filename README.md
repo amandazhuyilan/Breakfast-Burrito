@@ -1,7 +1,6 @@
 # Technical Review Notes
 ### Table of Contents
 [Clean and Good Code?](#Clean_Code)
-
 [Time Complexity](#Time_Complexity)
 
 Data Structure and Algorithms
@@ -29,6 +28,20 @@ Data Structure and Algorithms
     
 [Cheat Sheets](#Cheat_Sheets)  
 
+Python main template:
+```python
+ 
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+def main():
+    """ Main program """
+    # Code goes over here.
+    return 0
+
+if __name__ == "__main__":
+    main()
+```
 
 <a name="Clean_Code"></a>
 ### Clean and Good Code?
