@@ -172,6 +172,7 @@ def BinarySearch(self, startIndex, endIndex, nums, target):
 
 <a name="Queues_and_Stacks"></a>
 ### Queues and Stacks
+BFS uses queue, DFS uses stack.
 #### Stacks
 LIFO. Used for tracing back to previous elements or operations.
 ```
