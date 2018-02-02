@@ -32,5 +32,24 @@ When deleting a pointer:
 
 ``` p = NULL``` -> not necessary, will set 0x0112 to NULL
 
+- For array pointers, the array pointer has to be inititalized with some value:
+  ``` int * A[5] ```
+  
+  ``` delete A ```     This won't work 
+
+``` int * A = new int[5] ```
+
+``` delete A ```      This will work
+
+Arrays and pointers:
+
+Arrays are expensive: when created an array with 5 elements: 
+
+```Person * pArray[5]```
+
+This will call the ```Person``` Constructor 5 times to create each Person object.
+
+However, if we use pointers, ```Person *p``` the space will only be allocated when the pointers are called and used. 
+
 
 
