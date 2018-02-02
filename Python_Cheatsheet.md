@@ -3,6 +3,7 @@
 ### List:
 - Sort a list: ``` nums.sort()```
 - Get the last element of list: ```list[-1]```
+- Reverse a list: ```list[::-1]```
 - Remove the last element of the list: ```list.pop```
 - Append a new sublist into a list: ```mainset.append([] + subset)```
 - Create a row x col matrix: ```matrix = [[0 for x in range(col)] for y in range(row)]```
