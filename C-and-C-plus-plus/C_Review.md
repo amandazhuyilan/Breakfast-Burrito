@@ -33,9 +33,11 @@ When deleting a pointer:
 ``` p = NULL``` -> not necessary, will set 0x0112 to NULL
 
 - For array pointers, the array pointer has to be inititalized with some value:
+
   ``` int * A[5] ```
   
   ``` delete A ```     This won't work 
+  
 
 ``` int * A = new int[5] ```
 
