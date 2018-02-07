@@ -4,7 +4,6 @@
 
 # [ [3], [1], [2], [1,2,3], [1,3], [2,3], [1,2],[]]
 
-
 def subsets(nums):
     results = []
     subset = []
@@ -21,7 +20,6 @@ def subsets(nums):
 
 def DFS(startIndex, nums, subset, results):
     results.append([] + subset)
-    print(results)
 
     for i in range(startIndex, len(nums)):            
         subset.append(nums[i])
