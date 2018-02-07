@@ -11,3 +11,4 @@
 ### String:
 - ```find()```: If substring exists inside the string, it returns the lowest index where substring is found.
 If substring doesn't exist inside the string, it returns -1.
+- ```string.isalpha``` and ```string.isdigit``` for alphabet and digit determination.
