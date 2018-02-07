@@ -1,12 +1,12 @@
 # Technical Review Notes
 ### Table of Contents
 [Clean and Good Code?](#Clean_Code)
-
 [Time Complexity](#Time_Complexity)
 
 Data Structure and Algorithms
   - [Hash Tables](#Hash_Tables)
   - [ASCII and UNICODE](#ASCII_and_UNICODE)
+  - [Binary Search](#Binary_Search)
   - [Binary Search Trees](#Binary_Search_Trees)
   - [Linked List and Graphs](#Linked_List_and_Graphs)
   - [Queues and Stacks](#Queues_and_Stacks)
@@ -28,6 +28,18 @@ Data Structure and Algorithms
     
 [Cheat Sheets](#Cheat_Sheets)  
 
+Python main template:
+```python 
+#!/usr/bin/env python
+
+def main():
+    """ Main program """
+    # Code goes over here.
+    return 0
+
+if __name__ == "__main__":
+    main()
+```
 
 <a name="Clean_Code"></a>
 ### Clean and Good Code?
@@ -79,33 +91,31 @@ Unicode is a superset of ASCII, and the numbers 0–128 have the same meaning in
 
 Because Unicode characters don't generally fit into one 8-bit byte, there are numerous ways of storing Unicode characters in byte sequences, such as UTF-32 and UTF-8.
 
-<a name="Binary_Search_Trees"></a>
 
+<a name="Binary_Search"></a>
 ### Binary Search
 
 Let's assume we want to find a target number in an array of ints in ```nums```:
 
 ```python
 def BinarySearch(self, startIndex, endIndex, nums, target):
-  while startIndex <= endIndex:
+  while startIndex + 1 < endIndex:
     mid = (startIndex + endIndex)//2
     if nums[mid] == target:
       return True
     elif nums[mid] > target:
       return self.BinarySearch(startIndex, mid - 1, nums, target)
     elif nums[mid] < target:
-      return self.BinarySearch(startIndex, mid + 1, nums, target)
+      return self.BinarySearch(mid + 1, endIndex, nums, target)
   return False
   ```
   
-
+<a name="Binary_Search_Trees"></a>
 ### [Binary Search Trees](https://github.com/amandazhuyilan/Castro-Street/blob/master/Data-Structures/BinarySearchTree.py)
   - A binary search tree is a binary tree in which all left decendents <= n <= all right decendents.
-  - BST Operations are usuallty O(log n). 
+  - BST Operations are usuallty O(log n). The length of a balanced BST is log n, worst case scenario is n.
   - Complete binary tree: every level is filled except for perhaps the last level.
-  - Full binary tree: every node has zero or two children.
-  - Perfect binary tree: both full and complete.
-  
+ 
   Binary Tree Traversals
   - In-order: 
     ```
@@ -162,6 +172,7 @@ def BinarySearch(self, startIndex, endIndex, nums, target):
 
 <a name="Queues_and_Stacks"></a>
 ### Queues and Stacks
+BFS uses queue, DFS uses stack.
 #### Stacks
 LIFO. Used for tracing back to previous elements or operations.
 ```
@@ -373,6 +384,8 @@ Example: the ```add``` function would result in different behaviour depending on
 #### [Heaps and Stacks](http://net-informations.com/faq/net/stack-heap.htm)
 Stack is used for static memory allocation and heap for dynamic memory allocation, both stored in the computer's RAM .
 
+Use stack if exactly how much data needed to allocate is known before compile time and it is not too big.	Use heap if don't know exactly how much data needed at runtime or need to allocate a lot of data.
+
 - __Stack__
 
 The most straightforward way LIFO stacks may be programmed into conventional computers is to allocate an array in memory, and keep a variable with the array index number of the topmost active element. Blocks of memory locations can be allocated and a pointer (%esp) with the actual address of the top stack element is used to maintain and keep track of the topmost element.
@@ -386,8 +399,6 @@ The stack is always reserved in a LIFO order, the most recently reserved block i
 - __Heap__
 
 Variables allocated on the heap have their memory allocated at run time and accessing this memory is a bit slower, but the     heap size is only limited by the size of virtual memory . Element of the heap have no dependencies with each other and can     always be accessed randomly at any time. You can allocate a block at any time and free it at any time. This makes it much     more complex to keep track of which parts of the heap are allocated or free at any given time.
-
-  - Use stack if exactly how much data needed to allocate is known before compile time and it is not too big.	Use heap if       don't know exactly how much data needed at runtime or need to allocate a lot of data.
 
   - In a multi-threaded situation each thread will have its own completely independent stack but they will share the heap.        Stack is thread specific and heap is application specific. The stack is important to consider in exception handling and        thread executions.
 
@@ -412,34 +423,6 @@ vulnerabilities in systems.
 Happens when memory that is allocated, then unused but never freed. The device should work indefinitely, without ever needing a reboot, but this will slowly leak memory eventually
 leads to running out of memory, at which point a restart is required.
 
-##### Reasons for memoy leaks:
-
-When you write a short-lived program, you might allocate some space
-using ```malloc()```. The program runs and is about to complete: is there
-need to call ```free()``` a bunch of times just before exiting? While it seems
-wrong not to, no memory will be “lost” in any real sense. The reason is
-simple: there are really two levels of memory management in the system.
-
-The first level of memory management is performed by the OS, which
-hands out memory to processes when they run, and takes it back when
-processes exit (or otherwise die). The second level of management
-is within each process, for example within the heap when you call
-```malloc()``` and ```free()```. Even if you fail to call ```free()``` (and thus leak
-memory in the heap), the operating system will reclaim all the memory of
-the process (including those pages for code, stack, and, as relevant here,
-heap) when the program is finished running. No matter what the state
-of your heap in your address space, the OS takes back all of those pages
-when the process dies, thus ensuring that no memory is lost despite the
-fact that you didn’t free it.
-
-Thus, for short-lived programs, leaking memory often does not cause any
-operational problems (though it may be considered poor form). When
-you write a long-running server (such as a web server or database management
-system, which never exit), leaked memory is a much bigger issue,
-and will eventually lead to a crash when the application runs out of
-memory. And of course, leaking memory is an even larger issue inside
-one particular program: the operating system itself. 
-  
 <a name="Stack_Overflow"></a>  
 #### Stack Overflow
 When a particular computer program tries to use more memory space than the call stack has available.
@@ -451,7 +434,7 @@ Happens during excessively deep or infinite recursion, in which a function calls
   - [Big Oh](http://bigocheatsheet.com/)
   - [Time Complexity Cheat Sheet](https://www.packtpub.com/sites/default/files/downloads/4874OS_Appendix_Big_O_Cheat_Sheet.pdf)
   - [HTML](http://www.simplehtmlguide.com/cheatsheet.php)
-  - Regex. [Interactive Tutorial](https://regexone.com/) and [Online Regex Testing](https://regex101.com/).
+  - [Online Regex Testing](https://regex101.com/).
   - [How does the internet works?](https://web.stanford.edu/class/msande91si/www-spr04/readings/week1/InternetWhitepaper.htm)
-  - [MIT Handouts _Hacking a Google Interview-](http://courses.csail.mit.edu/iap/interview/materials.php)
+  - [MIT Handouts _Hacking a Google Interview](http://courses.csail.mit.edu/iap/interview/materials.php)
 
