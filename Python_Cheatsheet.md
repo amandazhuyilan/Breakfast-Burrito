@@ -9,6 +9,14 @@
 - Create a row x col matrix: ```matrix = [[0 for x in range(col)] for y in range(row)]```
 
 ### String:
-- ```find()```: If substring exists inside the string, it returns the lowest index where substring is found.
+- ```string.find()```: If substring exists inside the string, it returns the lowest index where substring is found.
 If substring doesn't exist inside the string, it returns -1.
+- ```string.join()```: Joins a string seperated by the ```string```element.
+```
+s = "-"
+seq = ("a", "b", "c"); # This is sequence of strings.
+s.join( seq )
+```
+Will print ```a-b-c```
+
 - ```string.isalpha``` and ```string.isdigit``` for alphabet and digit determination.
