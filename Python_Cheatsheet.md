@@ -21,3 +21,12 @@ print(s.join( seq ))
 Will print ```a-b-c```.
 
 - ```string.isalpha``` and ```string.isdigit``` for alphabet and digit determination.
+
+### Numbers
+To get the largest/smallest int:
+```
+import sys
+max_num = sys.maxint
+min_num = -sys.maxint
+```
+
