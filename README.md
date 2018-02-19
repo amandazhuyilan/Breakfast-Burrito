@@ -1,7 +1,9 @@
 # Technical Review Notes
 ### Table of Contents
 [Clean and Good Code?](#Clean_Code)
+
 [Time Complexity](#Time_Complexity)
+
 
 Data Structure and Algorithms
   - [Hash Tables](#Hash_Tables)
@@ -13,6 +15,7 @@ Data Structure and Algorithms
   - [Queues and Stacks](#Queues_and_Stacks)
   - [Algorithms](#Algorithms)
   - [Bitwise Operations](#Bitwise_Operations)
+  - [Iteration and Recursion](#Iteration_and_Recursion)
   
 [Network](#Network)
 
@@ -325,6 +328,17 @@ In Python:
 - x      => returns the complement of x. (-x - 1).
 - x ^ y  => bitwise XOR. 
 
+
+<a name="Iteration_and_Recursion"></a>
+### Iteration and Recursion
+
+Both perform the same kinds of tasks: Solve a complicated task one piece at a time, and combine the results. 
+
+- Iteration: keep repeating until a task is “done”.
+  - e.g., loop counter reaches limit, linked list reaches null pointer, instream.eof() becomes true. 
+  
+- Recursion: solve a large problem by breaking it up into smaller and smaller pieces until you can solve it; combine the results.
+  - e.g., recursive factorial funtion
 
 
 <a name="Network"></a>  
