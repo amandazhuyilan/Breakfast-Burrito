@@ -32,7 +32,7 @@ When deleting a pointer:
 
 ``` p = NULL``` -> not necessary, will set 0x0112 to NULL
 
-- For array pointers, the array pointer has to be inititalized with some value:
+- For array pointers, the array pointer has to be inititalized with some value (only delete with [] when ```*char``` is initialized with []:
 
   ``` int * A[5] ```
   

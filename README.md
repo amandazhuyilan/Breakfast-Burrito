@@ -1,7 +1,9 @@
 # Technical Review Notes
 ### Table of Contents
 [Clean and Good Code?](#Clean_Code)
+
 [Time Complexity](#Time_Complexity)
+
 
 Data Structure and Algorithms
   - [Hash Tables](#Hash_Tables)
@@ -9,9 +11,11 @@ Data Structure and Algorithms
   - [Binary Search](#Binary_Search)
   - [Binary Search Trees](#Binary_Search_Trees)
   - [Linked List and Graphs](#Linked_List_and_Graphs)
+  - [Heap and Priority Queues](#Heap_and_Priority_Queues)
   - [Queues and Stacks](#Queues_and_Stacks)
   - [Algorithms](#Algorithms)
   - [Bitwise Operations](#Bitwise_Operations)
+  - [Iteration and Recursion](#Iteration_and_Recursion)
   
 [Network](#Network)
 
@@ -168,7 +172,20 @@ def BinarySearch(self, startIndex, endIndex, nums, target):
   
   - BFS for graphs: By implementing a queue and a ```visited``` list to keep track of if the nodes of a vertex, starting with the source, BFS prints out the neighbouring nodes of the vertex and moves on to the next one by popping the queue.
   
-  - DFS for graphs: Using a recrusive function in the ```DFS_helper``` function, we go down the vertex starting from teh source and prints all the vertices that are not included in the ```visited``` list.
+  - DFS for graphs: Using a recrusive function in the ```DFS_helper``` function, we go down the vertex starting from the source and prints all the vertices that are not included in the ```visited``` list.
+
+<a name="Heap_and_Priority_Queues"></a>
+### Heap and Priority Queues
+```
+                    Heap        PriorityQueue
+1. Insert()         logn           logn
+2. Delete()         logn           O(n)/ X
+3. Pop()            logn           logn
+4. Find()           logn             X
+5. Modify()         logn             X
+6. Min / Max        O(1)           O(1)
+7. upper / lower     X              X
+```
 
 <a name="Queues_and_Stacks"></a>
 ### Queues and Stacks
@@ -311,6 +328,17 @@ In Python:
 - x      => returns the complement of x. (-x - 1).
 - x ^ y  => bitwise XOR. 
 
+
+<a name="Iteration_and_Recursion"></a>
+### Iteration and Recursion
+
+Both perform the same kinds of tasks: Solve a complicated task one piece at a time, and combine the results. 
+
+- Iteration: keep repeating until a task is “done”.
+  - e.g., loop counter reaches limit, linked list reaches null pointer, instream.eof() becomes true. 
+  
+- Recursion: solve a large problem by breaking it up into smaller and smaller pieces until you can solve it; combine the results.
+  - e.g., recursive factorial funtion
 
 
 <a name="Network"></a>  
