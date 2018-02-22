@@ -33,19 +33,6 @@ Data Structure and Algorithms
     
 [Cheat Sheets](#Cheat_Sheets)  
 
-Python main template:
-```python 
-#!/usr/bin/env python
-
-def main():
-    """ Main program """
-    # Code goes over here.
-    return 0
-
-if __name__ == "__main__":
-    main()
-```
-
 <a name="Clean_Code"></a>
 ### Clean and Good Code?
 Written by someone who cares.
