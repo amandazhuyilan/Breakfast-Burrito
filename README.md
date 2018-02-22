@@ -10,7 +10,8 @@ Data Structure and Algorithms
   - [ASCII and UNICODE](#ASCII_and_UNICODE)
   - [Binary Search](#Binary_Search)
   - [Binary Search Trees](#Binary_Search_Trees)
-  - [Linked List and Graphs](#Linked_List_and_Graphs)
+  - [Graphs](#Graphs)
+  - [Linked List](#Linked_List)
   - [Heap and Priority Queues](#Heap_and_Priority_Queues)
   - [Queues and Stacks](#Queues_and_Stacks)
   - [Algorithms](#Algorithms)
@@ -160,20 +161,25 @@ def BinarySearch(self, startIndex, endIndex, nums, target):
   - [Max-heap](): A complete binary tree where each node is larger than its children. The root is the largest element in the tree.
     Operations: `insert` and `extract_min`, both takes O(log n) time.
     
-<a name="Linked_List_and_Graphs"></a>
-### Linked Lists and Graphs 
+<a name="Graphs"></a>
+### Graphs 
 
-#### [Linked lists](https://github.com/amandazhuyilan/Castro-Street/blob/master/Data-Structures/LinkedList.py)
-  - [Loop detecting](https://github.com/amandazhuyilan/Castro-Street/blob/master/Problems-and-Solutions/hasLoop.py): Uses          Floyd's hare-and-turtle algorithm, make a fast pointer that travels in two nodes at a time, and a slow pointer that            travels one node at a time. If there exists a loop in the linked-list, fast and slow will meet. 
-  
-#### [Graphs](https://github.com/amandazhuyilan/Castro-Street/blob/master/Data-Structures/graph.py)
-
-  Constructing a graph in an adjacency list format with ```defaultdict``` (imported from ```collections```) when adding an edge for not existing vertex, this will not throw KeyError exception like the normal dictionary function, but will just create a new vertex along with this edge.
+Constructing a graph in an adjacency list format with ```defaultdict``` (imported from ```collections```) when adding an edge for not existing vertex, this will not throw KeyError exception like the normal dictionary function, but will just create a new vertex along with this edge.
   
   - BFS for graphs: By implementing a queue and a ```visited``` list to keep track of if the nodes of a vertex, starting with the source, BFS prints out the neighbouring nodes of the vertex and moves on to the next one by popping the queue.
   
   - DFS for graphs: Using a recrusive function in the ```DFS_helper``` function, we go down the vertex starting from the source and prints all the vertices that are not included in the ```visited``` list.
+  
+  - [Graphs with python ```dict``` structures](https://github.com/amandazhuyilan/Castro-Street/blob/master/Problems-and-Solutions/FindPath.py)
 
+    
+    
+<a name="Linked_List"></a>
+### Linked List 
+
+#### [Linked lists](https://github.com/amandazhuyilan/Castro-Street/blob/master/Data-Structures/LinkedList.py)
+  - [Loop detecting](https://github.com/amandazhuyilan/Castro-Street/blob/master/Problems-and-Solutions/hasLoop.py): Uses          Floyd's hare-and-turtle algorithm, make a fast pointer that travels in two nodes at a time, and a slow pointer that            travels one node at a time. If there exists a loop in the linked-list, fast and slow will meet. 
+  
 <a name="Heap_and_Priority_Queues"></a>
 ### Heap and Priority Queues
 ```
