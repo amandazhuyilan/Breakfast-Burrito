@@ -1,5 +1,19 @@
 ## Python Cheatsheet
 
+```python 
+#!/usr/bin/env python
+
+def main():
+    """ Main program """
+    # Code goes over here.
+    return 0
+
+if __name__ == "__main__":
+    main()
+```
+
+```__name__``` is a built-in variable which evaluates to the name of the current module. However, if a module is being run directly (as in myscript.py above), then ```__name__``` instead is set to the string ```"__main__"```. This will be useful to test whether your script is being run directly or being imported by something else.
+
 ### List:
 - Sort a list: ``` nums.sort()```
 - Get the last element of list: ```list[-1]```
@@ -32,3 +46,9 @@ max_num = sys.maxint
 min_num = -sys.maxint
 ```
 
+### ```lambda``` functions
+
+An inline anonymous function:
+```python
+sorted(['Some', 'words', 'sort', 'differently'], key=lambda word: word.lower())
+```
