@@ -52,3 +52,6 @@ An inline anonymous function:
 ```python
 sorted(['Some', 'words', 'sort', 'differently'], key=lambda word: word.lower())
 ```
+
+Will print ```['differently', 'Some', 'sort', 'words']```.
+
