@@ -12,7 +12,9 @@
 ### String:
 - ```string.find()```: If substring exists inside the string, it returns the lowest index where substring is found.
 If substring doesn't exist inside the string, it returns -1.
-- ```string.join()```: Joins a string seperated by the ```string```element.
+- ```string.join()```: Joins a string seperated by the ```string```element. 
+  - convert list to string: ```''.join(list)```
+  
 ```
 s = "-"
 seq = ("a", "b", "c"); 
