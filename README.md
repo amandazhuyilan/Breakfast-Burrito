@@ -22,7 +22,6 @@ Data Structure and Algorithms
 
 [Computer Systems Knowledge](#Computer_Systems)
   - [Mutex, Locks, Sepamore and Monitor](#mutex)
-  - [Polymorphism](#Polymorphism)
   - [Heaps and Stacks](#Heaps_and_Stacks)
   - [Memory Layout Diagrams](#Memory_Layout)
   - [Common Errors](#Common_Errors)
@@ -389,12 +388,6 @@ A situation when a thread is waiting for an object lock that another thread hold
   3. No Preemption: One process cannot force another process to remove their access to the resource.
   4. Circular Wait: Two or more processes form a circular chain where each process is waiting on another resource in the                           chain.
 Deadlock prevention: Locks ranking.
-
-<a name="Polymorphism"></a>
-#### Polymorphism
-The ability of one method to have different behaviours depending on the type of object it is being called on or the type of object being passed as the parameter.
-
-Example: the ```add``` function would result in different behaviour depending on the type of input(int/float/double and string)
 
 <a name="Memory_Layout"></a>
 #### Memory Layout Diagram
