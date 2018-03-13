@@ -1,0 +1,22 @@
+def isFib(num):
+	if num is None:
+		return -1 
+	if num == 1:
+		return True
+
+	fib = []
+	fib.append(1)
+	fib.append(1)
+	
+	i = 2
+	while fib[i] < num:
+		fib.insert(i, fib[i-2] + fib[i-1])
+		print(fib)
+		if fib[i] == num:
+			return True
+
+		if fib[i] > num:
+			return False
+		i += 1
+
+print(isFib(5))
