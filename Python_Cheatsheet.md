@@ -18,6 +18,7 @@ if __name__ == "__main__":
 - Sort a list: ``` nums.sort()```
 - Get the last element of list: ```list[-1]```
 - Reverse a list: ```list[::-1]```
+- Iterate the list in reverse order: ``` for i in range(len(list)-1, -1, -1)```
 - Remove the __first__ element of the list with value ```x```: ```list.remove(x)```
 - Remove the __last__ element of the list: ```list.pop()```
 - Append a new sublist into a list: ```mainset.append([] + subset)```
@@ -83,6 +84,17 @@ Celsius = map(lambda x: (float(5)/9 * (T - 32))
 ```python 
 fib = [0,1,1,2,3,5,8,13,21,34,55]
 result = filter(lambda x: x % 2, fib)  # [0, 2, 8, 34]
+```
+
+### ```sys.argv``` 
+```sys.argv``` is a list in Python, which contains the command-line arguments passed to the script.
+
+```python
+import sys
+
+print("This is the name of the script: ", sys.argv[0])
+print("Number of arguments: ", len(sys.argv))
+print("The arguments are: " , str(sys.argv))
 ```
 
 ### Trees
