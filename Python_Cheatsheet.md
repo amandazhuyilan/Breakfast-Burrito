@@ -82,7 +82,7 @@ Celsius = map(lambda x: (float(5)/9 * (T - 32))
 ```filter(func, list)``` provides a way to filter out the elements of the list, for which the ```func``` returns true.
 ```python 
 fib = [0,1,1,2,3,5,8,13,21,34,55]
-result = filter(lambda: x: x % 2, fib)  # [0, 2, 8, 34]
+result = filter(lambda x: x % 2, fib)  # [0, 2, 8, 34]
 ```
 
 ### Trees
