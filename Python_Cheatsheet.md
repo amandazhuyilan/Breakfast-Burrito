@@ -37,6 +37,12 @@ print(s.join( seq ))
 ```
 Will print ```a-b-c```.
 
+```string.split(",")```: splits the substrings in the string by the given character and return a list of the substrings.
+```python
+s = "a,b,c"
+print(s.split(s))   # will print ["a","b","c"]
+```
+
 - ```string.isalpha``` and ```string.isdigit``` for alphabet and digit determination.
 
 ### Numbers
