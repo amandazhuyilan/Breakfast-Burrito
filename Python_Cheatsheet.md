@@ -18,7 +18,7 @@ if __name__ == "__main__":
 - Sort a list: ``` nums.sort()```
 - Get the last element of list: ```list[-1]```
 - Reverse a list: ```list[::-1]```
-- Iterate the list in reverse order: ``` for i in range(len(list)-1, -1, -1)```
+- Iterate the list in reverse order: ``` for i in range(len(list)-1, 0, -1)```
 - Remove the __first__ element of the list with value ```x```: ```list.remove(x)```
 - Remove the __last__ element of the list: ```list.pop()```
 - Append a new sublist into a list: ```mainset.append([] + subset)```
