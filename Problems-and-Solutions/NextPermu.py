@@ -9,6 +9,7 @@
 # 3,2,1 → 1,2,3
 # 1,1,5 → 1,5,1
 
+# https://pythonadventures.wordpress.com/2012/03/21/lexicographically-next-permutation/
 
 class Solution:
     def nextPermutation_itertools(self, nums):
