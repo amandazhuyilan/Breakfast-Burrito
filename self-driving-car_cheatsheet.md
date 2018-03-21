@@ -42,8 +42,10 @@ receive it.
   - Accuracy based on camera calibration.
   
 ### [SLAM Simultaneous Localization and Mapping](https://ocw.mit.edu/courses/aeronautics-and-astronautics/16-412j-cognitive-robotics-spring-2005/projects/1aslam_blas_repo.pdf)
-The goal of this technology is to use the environment to update the position of the robot.
-- Extended Kalman Filter: update where the robot thinks it is based on features(landmarks)
+This technique builds and updates a map of a vehicle's surroundings while keeping the vehicle located within a map.
 
+<img src="https://github.com/amandazhuyilan/Castro-Street/blob/master/SLAM.png" width= "400">
 
-  - No color/contrast/texture feedback. Low resolution. Low speed detection.
+When the odometry changes because the robots moves the uncertainty pertaining to the robot's new position is updated in the EKF uding the Odometry update. 
+Landmarks are then extracted from the environment from the robots new position. The robot then attempts to associate these landmarks to observations of landmarks it previously has seen. 
+Re-observed landmarks are then used to update the robot's position in the EKF. Landmarks which are not previously been seen are added to the EKF as new observations so that they can be re-observed later.
