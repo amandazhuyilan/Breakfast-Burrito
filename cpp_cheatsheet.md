@@ -56,6 +56,14 @@ If there is a ```virtual``` function, we need to add a virtual delete in the chi
 __How does vectors know when to increment vector size?__
 
 Whenever the vector hits max, it will automatically double the size.
+```
+for (auto iter = myVector.begin(); itr != myVector.end(); iter++)
+  cout << *iter << endl;
+```
+
+Adding an object in a vector without having to copy the object:
+
+```vector.emplace(vector.start(), "name", value)```
  
 #### Templates
 
