@@ -64,6 +64,14 @@ for (auto iter = myVector.begin(); itr != myVector.end(); iter++)
 Adding an object in a vector without having to copy the object:
 
 ```vector.emplace(vector.start(), "name", value)```
+
+#### lamnda functions
+```cpp 
+auto myFunction = [](int & val){val *= 2};
+int val10 = 10;
+myFunction(val10);
+cout << val10 << endl;        // will print 20
+```
  
 #### Templates
 
