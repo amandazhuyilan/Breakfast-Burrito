@@ -11,9 +11,9 @@
 - "You'll have future opportunities for growth."
   - "I'd love to discuss my opportunities because this number is a little lower than I feel uncomfortable with. I know that one of the most important things in this role are [...], if I'm able to deliver this in [time frame], would you be open to raising my compensation to [target salary] then?"
   
-  - "I don't have the budget for a higher salary."
-    - "If that is the case, would you be open to us working together to identify ways to cover this salary this year or plan for increased funds next year?"
-    - "I definitely understand the budget constraints, but with my experience and skills, I have demonstrated high potentials for this position, if not for now, do you think we could revisit 6 months from now?"
+- "I don't have the budget for a higher salary."
+  - "If that is the case, would you be open to us working together to identify ways to cover this salary this year or plan for increased funds next year?"
+  - "I definitely understand the budget constraints, but with my experience and skills, I have demonstrated high potentials for this position, if not for now, do you think we could revisit 6 months from now?"
     
  - "I would not be able to sell this to my boss or HR."
   - "I appreciate the challenge this presents. Based on my research, the range I asked for is fair market value and reflects the contributions and value I bring to this position. What is a more realistic range that we can consider?"
