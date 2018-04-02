@@ -89,11 +89,11 @@ add<int>(5,5);
 add<int, double>(5, 5.5)
 add<int, string>(5, "hello") // error
 ```
-#### [Smart Pointers](https://github.ccs.neu.edu/amandazhuyilan/CCIS3520-C-plus-plus/blob/master/smartPointers.cpp)
+### [Smart Pointers](https://github.ccs.neu.edu/amandazhuyilan/CCIS3520-C-plus-plus/blob/master/smartPointers.cpp)
 
 If want to make a unique pointer, we can put the copy constructor into the private section.
 
-#### Stacks
+### Stacks
 
 ```c++
 stack<char> mystack;
@@ -116,7 +116,7 @@ for (int i = 0; i < input.size(); i++){
 }
 ```
 
-#### Debugging Segmentation Faults
+### Debugging Segmentation Faults
 - Compile your application with ```-g```, then you'll have debug symbols in the binary file.
 - Use ```gdb``` to open the gdb console.
 - Use ```file``` and pass it your application's binary file in the console.
