@@ -34,6 +34,9 @@ When deleting a pointer:
 
 ``` p = NULL``` -> not necessary, will set 0x0112 to NULL
 ``` delete [] c ``` -> only need [] when the char * is initialized with []
+### [Smart Pointers](https://github.ccs.neu.edu/amandazhuyilan/CCIS3520-C-plus-plus/blob/master/smartPointers.cpp)
+
+[smart pointers in ```Boost```](https://stackoverflow.com/questions/569775/smart-pointers-boost-explained)
 
 __Difference between call by reference and call by pointer?__
 - References are never ```null```, but pointers may be ```null``` or pointing to invalid memory.
@@ -89,7 +92,6 @@ add<int>(5,5);
 add<int, double>(5, 5.5)
 add<int, string>(5, "hello") // error
 ```
-### [Smart Pointers](https://github.ccs.neu.edu/amandazhuyilan/CCIS3520-C-plus-plus/blob/master/smartPointers.cpp)
 
 If want to make a unique pointer, we can put the copy constructor into the private section.
 
