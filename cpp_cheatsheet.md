@@ -34,6 +34,9 @@ When deleting a pointer:
 
 ``` p = NULL``` -> not necessary, will set 0x0112 to NULL
 ``` delete [] c ``` -> only need [] when the char * is initialized with []
+### [Smart Pointers](https://github.ccs.neu.edu/amandazhuyilan/CCIS3520-C-plus-plus/blob/master/smartPointers.cpp)
+
+[smart pointers in ```Boost```](https://stackoverflow.com/questions/569775/smart-pointers-boost-explained)
 
 __Difference between call by reference and call by pointer?__
 - References are never ```null```, but pointers may be ```null``` or pointing to invalid memory.
@@ -56,6 +59,22 @@ If there is a ```virtual``` function, we need to add a virtual delete in the chi
 __How does vectors know when to increment vector size?__
 
 Whenever the vector hits max, it will automatically double the size.
+```
+for (auto iter = myVector.begin(); itr != myVector.end(); iter++)
+  cout << *iter << endl;
+```
+
+Adding an object in a vector without having to copy the object:
+
+```vector.emplace(vector.start(), "name", value)```
+
+#### lamnda functions
+```cpp 
+auto myFunction = [](int & val){val *= 2};
+int val10 = 10;
+myFunction(val10);
+cout << val10 << endl;        // will print 20
+```
  
 #### Templates
 
@@ -73,11 +92,10 @@ add<int>(5,5);
 add<int, double>(5, 5.5)
 add<int, string>(5, "hello") // error
 ```
-#### [Smart Pointers](https://github.ccs.neu.edu/amandazhuyilan/CCIS3520-C-plus-plus/blob/master/smartPointers.cpp)
 
 If want to make a unique pointer, we can put the copy constructor into the private section.
 
-#### Stacks
+### Stacks
 
 ```c++
 stack<char> mystack;
@@ -99,3 +117,10 @@ for (int i = 0; i < input.size(); i++){
     return 0;
 }
 ```
+
+### Debugging Segmentation Faults
+- Compile your application with ```-g```, then you'll have debug symbols in the binary file.
+- Use ```gdb``` to open the gdb console.
+- Use ```file``` and pass it your application's binary file in the console.
+- Use ```run``` and pass in any arguments your application needs to start.
+- Type ```bt``` in the gdb console to get a stack trace of the Segmentation Fault.
