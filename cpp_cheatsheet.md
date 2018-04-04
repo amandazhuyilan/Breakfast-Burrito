@@ -34,9 +34,15 @@ When deleting a pointer:
 
 ``` p = NULL``` -> not necessary, will set 0x0112 to NULL
 ``` delete [] c ``` -> only need [] when the char * is initialized with []
-### [Smart Pointers](https://github.ccs.neu.edu/amandazhuyilan/CCIS3520-C-plus-plus/blob/master/smartPointers.cpp)
+#### Smart Pointers
+Smart pointer is an abstract data type that simulates a pointer while providing added features, such as automatic memory management or bounds checking. It is mainly used to prevent most situations of memory leaks by making the memory deallocation automatic.
 
-[smart pointers in ```Boost```](https://stackoverflow.com/questions/569775/smart-pointers-boost-explained)
+Two main approaches:
+- The smart pointer allocates a small block of memory to contain the reference counter. Each copy of the smart pointer then receives a pointer to the actual object and a pointer to the reference count.
+
+- In addition to an object pointer, each smart pointer contains a previous and next pointer, thereby forming a doubly-linked list of smart pointers to a particular object. The reference count is implicit in the list. When a smart pointer is copied, it adds itself to the list. Upon destruction, each smart pointer removes itself from the list. If it's the last one in the list it then frees the referenced object as well.
+
+[smart pointers explained](https://softwareengineering.stackexchange.com/questions/274801/raw-weak-ptr-unique-ptr-shared-ptr-etc-how-to-choose-them-wisely)
 
 __Difference between call by reference and call by pointer?__
 - References are never ```null```, but pointers may be ```null``` or pointing to invalid memory.
