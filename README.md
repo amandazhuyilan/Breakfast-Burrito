@@ -33,20 +33,20 @@ Data Structure and Algorithms
 [Cheat Sheets](#Cheat_Sheets)  
 
 <a name="Clean_Code"></a>
-### Clean and Good Code?
-Written by someone who cares.
+### SOLID Principles
+- __Single responsibilty principle__: A class should have one and only one reason to change.
 
-Need to pass [CWE MITRE top 25 errors.](http://cwe.mitre.org/top25/) 
+- __Open-closed principle__: Objetcs should be open for extenstions, but closed for modifications.
 
-- __Single Responsibility Principle__. A function should be responsible for a single aspect of a system's requirements，which can be changed independently of other aspects. Should have minimal dependencies.
+- __Liskov substitution principle__: Objects in a program should be replacable with instances of their subtypes without altering the correctness of the program.
 
-- __Don't Repeat Yourself__. The modification of any single element of a system doesn't require a change in any other logically unrelated elements.
+- __Interface segregation principle__: Many cilent-specific intererface is better than one general-purpose interface.
 
-- __Keep It Simple and Stupid__. Most system works best if they are kept simple rather than made complex.
+- __Dependency inversion principle__: High level modules should not depend on low level modules, they should both depend upon abstractions.
 
-- Can be easily extended by any other developer. Be mindful and considerate. You might be the "other debveloper" some day.
 
-- Should have unit and acceptance tests.
+### Design Patterns
+### Factory
 
 <a name="Time_Complexity"></a>
 ## Time/Space Complexity
