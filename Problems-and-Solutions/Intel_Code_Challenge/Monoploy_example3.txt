@@ -1,0 +1,10 @@
+{"action":"none","landed_on":"Old Kent Road","player":"praneet","roll":3}
+{"action":"purchase","price":350,"landed_on":"Old Kent Road","player":"chenhui","roll":3}
+{"action":"purchase","price":100,"landed_on":"Atlantic Avenue","player":"sam","roll":4}
+{"action":"paid rent","price":50,"landed_on":"Atlantic Avenue","player":"loucas","roll":4}
+{"action":"purchase","price":450,"landed_on":"Regent Street","player":"craig","roll":5}
+{"action":"purchase","price":300,"landed_on":"Strand","player":"tom","roll":2}
+{"action":"none","landed_on":"King’s Cross Station","player":"jason","roll":6}
+{"action":"paid rent","price":150,"landed_on":"Strand","player":"mike","roll":2}
+{"action":"none","landed_on":"King’s Cross Station","player":"praneet","roll":3}
+{"action":"none","landed_on":"Short Line","player":"chenhui","roll":4}
