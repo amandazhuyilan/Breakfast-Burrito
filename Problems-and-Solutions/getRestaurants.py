@@ -5,15 +5,56 @@ import requests
 import json
 import urllib.parse
 import re
+import os 
+from tkinter import *
+from tkinter import messagebox
 
 
-# Registered for an enabled Google API project to get this API key, will be used to call Google Maps API in getPlaces and getLocation methods 
+# creates the view 
+def View():
+    # setting up the view
+    window = Tk()
+    window.title("Get Restaurants App")
+    window.geometry('420x200')
+    lbl = Label(window, text="Enter Address: ")
+    lbl.grid(column=0, row=0)
+    txt = Entry(window)
+    txt.grid(column=1, row=0, columnspan=2,)
+    listbox = Listbox(window)
+    listbox.grid(column=0, row=1, columnspan=4, sticky=N+E+S+W)
 
-API_key = "AIzaSyB3-8q6wF2coQppBg6-uRBoepL07eCAcWw"
+    # resizing the grids so that they fit to the contents
+    for i in range(3):
+        window.grid_columnconfigure(i, weight=1)
+
+    def clicked():
+        address_txt = txt.get()
+        if address_txt == '':
+            messagebox.showerror("Error", "Please enter an address!")
+            return
+
+        getPlaces(address_txt)
+
+        # read in the restaraunts line by line from places.txt generated in getPlaces method
+        with open('Places.txt') as f:
+            content = f.readlines()
+        content = [x.strip('\n') for x in content] 
+
+        for index, i in enumerate(content):
+            listbox.insert(index, i)
+
+    btn = Button(window, text="Find restaurants", command=clicked)
+    btn.grid(column=3, row=0)
+
+    window.mainloop()
 
 # Get a list of places based on input location (in radius of 8000 meters(5 miles) ) and output into a text file
 def getPlaces(input_address):
     # getting the geolocation of the address as a input parameter for Google maps places API
+
+    # Registered for an enabled Google API project to get this API key, will be used to call Google Maps API in getPlaces and getLocation methods 
+
+    API_key = "AIzaSyB3-8q6wF2coQppBg6-uRBoepL07eCAcWw"
 
     input_address = input_address.replace(' ', '+')
     # parameters for getting the geolocation of address
@@ -63,14 +104,17 @@ def getPlaces(input_address):
             str_location = j_place_location['results'][0]['formatted_address']
             place_address_list.append(str_location)
 
+        # remove Places.txt if already exists
+        try:
+            os.remove('Places.txt')
+        except OSError:
+            pass
+
         with open('Places.txt', 'w') as f:
             for i in range(len(j_places['results'])):
                 print(str(place_name_list[i]) + ', ' + str(place_address_list[i]))
-                f.write(str(place_name_list[i]) + ' ' + str(place_address_list[i]))
+                f.write(str(place_name_list[i]) + '; ' + str(place_address_list[i]) + '\n')
 
 
 if __name__ == "__main__":
-    address = "Northeastern University"
-
-    getPlaces(address)
-
+    View()
