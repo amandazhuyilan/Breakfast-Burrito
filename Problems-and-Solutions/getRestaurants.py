@@ -21,11 +21,12 @@ def View():
     txt = Entry(window)
     txt.grid(column=1, row=0, columnspan=2,)
     listbox = Listbox(window)
-    listbox.grid(column=0, row=1, columnspan=4, sticky=N+E+S+W)
-
-    # resizing the grids so that they fit to the contents
-    for i in range(3):
-        window.grid_columnconfigure(i, weight=1)
+    listbox.grid(column=0, row=1, columnspan=4, sticky=N+E+S+W, padx=5, pady=5)
+    listbox.config(width=0)
+    window.winfo_toplevel().wm_geometry("")
+    # # resizing the grids so that they fit to the contents
+    # for i in range(3):
+    #     window.grid_columnconfigure(i, weight=1)
 
     def clicked():
         address_txt = txt.get()
@@ -40,10 +41,13 @@ def View():
             content = f.readlines()
         content = [x.strip('\n') for x in content] 
 
+        # clear previous info in listbox
+        listbox.delete(0,END)
+
         for index, i in enumerate(content):
             listbox.insert(index, i)
 
-    btn = Button(window, text="Find restaurants", command=clicked)
+    btn = Button(window, text="Find restaurants", command=clicked, padx=5)
     btn.grid(column=3, row=0)
 
     window.mainloop()
@@ -77,6 +81,7 @@ def getPlaces(input_address):
 
     if "error_message" in j_places:
         print('ERROR: ' + j_places['error_message'])
+        sys.exit()
 
     else:
         place_name_list = []
@@ -85,7 +90,6 @@ def getPlaces(input_address):
             # get place name
             place_name = j_places['results'][index]['name'].encode('ascii', 'ignore')
             str_place_name = place_name.decode('utf-8')
-            place_name_list.append(str_place_name)
 
             # get place address
             place_address = j_places['results'][index]['name'].encode('ascii', 'ignore')
