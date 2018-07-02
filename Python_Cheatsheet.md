@@ -14,6 +14,9 @@ if __name__ == "__main__":
 
 ```__name__``` is a built-in variable which evaluates to the name of the current module. However, if a module is being run directly (as in myscript.py above), then ```__name__``` instead is set to the string ```"__main__"```. This will be useful to test whether your script is being run directly or being imported by something else.
 
+### Handling Exceptions
+This [guide](http://hplgit.github.io/primer.html/doc/pub/input/._input-readable007.html) is exceptionally helpful.
+
 ### List:
 - Sort a list: ``` nums.sort()```
 - Get the last element of list: ```list[-1]```
