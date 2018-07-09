@@ -12,7 +12,7 @@ if __name__ == "__main__":
     main()
 ```
 
-```__name__``` is a built-in variable which evaluates to the name of the current module. However, if a module is being run directly (as in myscript.py above), then ```__name__``` instead is set to the string ```"__main__"```. This will be useful to test whether your script is being run directly or being imported by something else.
+```__name__``` is a built-in variable which evaluates to the name of the current module. However, if a module is being run directly (as in myscript.py above), then ```__name__``` instead is set to the string ```"__main__"```. The file can be usable as a script as well as an importable module, because the code that parses the command line only runs if the module is executed as the “main” file. This will be useful to test whether your script is being run directly or being imported by something else.
 
 ### Handling Exceptions and Errors
 This [guide](http://hplgit.github.io/primer.html/doc/pub/input/._input-readable007.html) is an exceptionally good example.
