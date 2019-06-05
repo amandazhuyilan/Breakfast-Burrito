@@ -29,6 +29,10 @@
         - `b = a[:]` # `a == b` but `a is not b`
     - Creating a deep copy (all objects 'copied' are copies)
         - `b = copy.deepcopy(a)`
+        
+
+#### `__main__`
+
 ```python 
 #!/usr/bin/env python
 
@@ -137,11 +141,4 @@ print("Number of arguments: ", len(sys.argv))
 print("The arguments are: " , str(sys.argv))
 ```
 
-### Trees
-```python
-class TreeNode:
-    def __init__(self, val):
-        self.val = val
-        self.left, self.right = None, None
-```
 
