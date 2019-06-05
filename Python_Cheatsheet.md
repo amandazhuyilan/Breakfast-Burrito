@@ -1,5 +1,34 @@
 ## Python Cheatsheet
 
+### Python 103 - Memory Model and Best Practises
+#### Objects and References
+- Objects are allocated on assignment.
+- All objects are passed by __reference__.
+    - References area also called _aliases_.
+    - Every object has an extra field called reference count that is increased or decreased when a pointer to an object is copied or deleted.
+        `refcount` increment examples:
+        - Object is created and assigned. (`foo = 'abc'`)
+        - Additional alises for it is created. (`bar = foo`)
+        - Object passed to a function (new local reference) `(spam(foo)`)
+        - Object becomes part of a container object. (`manyFoo = [foo, 'xyz']`)
+    - Objects are garbage-collected when the reference count goes to 0.
+    - Global variable's reference count never goes to 0.
+    - Check the number of current references using `sys.getrefcount` function.
+
+#### `is` and `==`
+- `is` is an object identity (pointer) comparisor, `==` is an object value comparisor.
+- Use `is` when comparing singletons (`True`, `False`, `None`).
+
+
+#### Copying Objects
+- Trickier with mutable objects: list, dictionary, set and user-defined classes.
+- copying `a` to `b`:
+    - Creating an alias is not a copy: `a = b`
+        - `a == b` and `a is b` (`id(a) == id(b)`)
+    - Creating a shallow copy (all objects 'copied' as aliases):
+        - `b = a[:]` # `a == b` but `a is not b`
+    - Creating a deep copy (all objects 'copied' are copies)
+        - `b = copy.deepcopy(a)`
 ```python 
 #!/usr/bin/env python
 
