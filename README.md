@@ -44,10 +44,6 @@ Data Structure and Algorithms
 
 - __Dependency inversion principle__: High level modules should not depend on low level modules, they should both depend upon abstractions.
 
-
-### Design Patterns
-### Factory
-
 <a name="Time_Complexity"></a>
 ## Time/Space Complexity
 
@@ -452,3 +448,7 @@ Happens during excessively deep or infinite recursion, in which a function calls
   - [How does the internet works?](https://web.stanford.edu/class/msande91si/www-spr04/readings/week1/InternetWhitepaper.htm)
   - [MIT Handouts _Hacking a Google Interview](http://courses.csail.mit.edu/iap/interview/materials.php)
 
+### Reading List
+- [Programming Behavior](https://snorriheim.atlassian.net/wiki/spaces/TechnicalNotes/pages/2097251/Programming+Behaviours) Section in Daniel's blog.
+- [Python 3 Pattern, Recipe and Idioms](https://python-3-patterns-idioms-test.readthedocs.io/en/latest/index.html)
+- [An Intro to Behavior Trees in Robotics and AI](https://arxiv.org/pdf/1709.00084.pdf)
