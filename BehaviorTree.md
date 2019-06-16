@@ -16,11 +16,14 @@ as traditionally-written programs.
 ### What are Behavior Trees
 
 Behavior Tree is a directed root tree where the internal nodes are called _controlled flow nodes_ and leaf nodes are called _execution nodes_.
-A behavior tree starts its execution from the root node that generates signals to allow the execution of a node called _tick_ with a given frequency, 
-which are sent to its children nodes. A node is executed only and only if it receieved a tick. The child node withh immediately return _RUNNING_ to
+A behavior tree starts its __Depth First Traversal__ execution from the root node that generates signals to allow the execution of a node called _tick_ with a given frequency, which are sent to its children nodes. A node is executed only and only if it receieved a tick. The child node withh immediately return _RUNNING_ to
 the parent, _SUCCESS_ if the goal is reached, or _FAILURE_ otherwise.
 
 ### Finite State Machines (FSM)
+- The new state depends on the old state and the input - this means that the entire history of the machine is summarized in its current state. All that matters is the state that it is in and not how it reached this state.  
+
+Many programming problems are most easily solved by actually implementing a finite state machine. You set up an array or other data structure which stores the possible states and you implement a pointer to the location that is the current state. Each state contains a lookup table that shows what the next state is given an input symbol. When a symbol is read in your program simply has to look it up in the lookup table and move the pointer to the new state.
+
 Advantages:
 - Common structure, intuitive and easy to understand and implement.
 - Ideal for simple, less complex systems.
