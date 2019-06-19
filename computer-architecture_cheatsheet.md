@@ -1,7 +1,6 @@
 ## ISA (Instruction Set Architecture
 - Refers to the actual programmer-visible instruction set,serves as a boundary between the software and the hardware.
 - Nearly all ISAs are classified as general purpose register architectures, where the operands are either registers or memory location
-- 
 
 ## [RISC VS. CISC](https://cs.stanford.edu/people/eroberts/courses/soco/projects/risc/risccisc/)
 We use a simple `MULT` instruction to demonstrate how the two architecture systems differ.
@@ -57,7 +56,6 @@ Thread is a single flow of execution or control, they are are implementation det
   - two main ready states:
     - `RUNNING` actually using the CPU
     - `READY`: waiting while another thread is running
-    
 - priority
 - scheduling algorithm
 - register set
