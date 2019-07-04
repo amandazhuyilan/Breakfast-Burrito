@@ -1,32 +1,26 @@
 ## Behavior Trees
 
-### How did Behavior Trees come along
+### Background
 
 Behavior trees were first developed in computer games to control NPCs (Non-Player Characters), where in the gaming industry modularity is a key property
 that enables reuse of code, incremental design of functionality and efficient testing.
 
-- In Robotic Manipulation, the __main advantage__ of using Behavior Trees are that they can be easily reused in the context of another higher level behavior, without needing to specify how they relate to
+Since behavior trees are, by defininition, non self referential in that the leaf nodes should never point back to the parent, it makes it very easy to: 
+- decompose the task into simpler ones without being concerned about how the subtask will fit into the larger class.
+- be reused in the context of another higher level behavior, without needing to specify how they relate to
 the subsequent behaviors.
-
-- In robot programming of pick-and-place operations, behavior trees allow end-users to visually create programs with the same amount of complexity and power
-as traditionally-written programs.
-
-- In brain surgery robots, behavior trees are favoured due to their flexibility, reusability and simple syntax.
 
 ### What are Behavior Trees
 
-Behavior Tree is a directed root tree where the internal nodes are called _controlled flow nodes_ and leaf nodes are called _execution nodes_.
-A behavior tree starts its __Depth First Traversal__ execution from the root node that generates signals to allow the execution of a node called _tick_ with a given frequency, which are sent to its children nodes. A node is executed only and only if it receieved a tick. The child node withh immediately return _RUNNING_ to
+Behavior Tree is a directed root tree that consists of 3 types of nodes: _controlled flow nodes_ ("behavior"), a _state odifying node_ ("decorator") and leaf nodes, _execution nodes_, that does the actual work.
+
+A behavior tree starts its __Depth First Traversal__ execution from the root node that generates signals to allow the execution of a node called _tick_ with a given frequency, which are sent to its children nodes.
+
+A node is executed only and only if it receieved a tick. The child node withh immediately return _RUNNING_ to
 the parent, _SUCCESS_ if the goal is reached, or _FAILURE_ otherwise.
 
 ### Finite State Machines (FSM)
-- The new state depends on the old state and the input - this means that the entire history of the machine is summarized in its current state. All that matters is the state that it is in and not how it reached this state.  
-
-Many programming problems are most easily solved by actually implementing a finite state machine. You set up an array or other data structure which stores the possible states and you implement a pointer to the location that is the current state. Each state contains a lookup table that shows what the next state is given an input symbol. When a symbol is read in your program simply has to look it up in the lookup table and move the pointer to the new state.
-
-Advantages:
-- Common structure, intuitive and easy to understand and implement.
-- Ideal for simple, less complex systems.
+An Finite State Machine is defined by a list of its states, its initial state, and the conditions for each transition.
 
 Disadvantages:
 - Maintainability: Adding or removing states requires the re-evaluation a potentially large number of transitions and internal states of the FSM.
