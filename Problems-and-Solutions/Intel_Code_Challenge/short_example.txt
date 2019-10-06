@@ -1,5 +1,0 @@
-{"player":“mike”,"landed_on":“ParkAve”,"action":“purchase”,"roll":6,"price":200}
-{"player":“john”,"roll":5,"landed_on":“ConnecticutAve”,"action":“purchase”,"price":100}
-{"action":“none”,"player":“tom”,"roll":3,"landed_on":“VermontAve”}
-{"player":“bob”,"roll":5,"landed_on":“ConnecticutAve”,"action":“paidrent”,"price":50}
-{"landed_on":“St.CharlesPlace”,"action":“purchase”,"player":“mike”,"price":100}
