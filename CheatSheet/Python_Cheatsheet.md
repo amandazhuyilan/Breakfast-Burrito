@@ -141,4 +141,13 @@ print("Number of arguments: ", len(sys.argv))
 print("The arguments are: " , str(sys.argv))
 ```
 
+### Dynamically Printing Multiple Lines on Console
+```
+# cursor up one line
+sys.stdout.write('\x1b[1A')
+# delete last line
+sys.stdout.write('\x1b[2K')
+```
+
+
 
