@@ -441,14 +441,12 @@ Happens during excessively deep or infinite recursion, in which a function calls
 
 <a name= "Cheat_Sheets"></a>
 ### Cheat Sheets
-  - [Big Oh](http://bigocheatsheet.com/)
   - [Time Complexity Cheat Sheet](https://www.packtpub.com/sites/default/files/downloads/4874OS_Appendix_Big_O_Cheat_Sheet.pdf)
   - [HTML](http://www.simplehtmlguide.com/cheatsheet.php)
   - [Online Regex Testing](https://regex101.com/).
+  - [Python regex cheatsheet](http://pycon2017.regex.training/cheat-sheet.html)
   - [How does the internet works?](https://web.stanford.edu/class/msande91si/www-spr04/readings/week1/InternetWhitepaper.htm)
-  - [MIT Handouts _Hacking a Google Interview](http://courses.csail.mit.edu/iap/interview/materials.php)
 
 ### Reading List
 - [Programming Behavior](https://snorriheim.atlassian.net/wiki/spaces/TechnicalNotes/pages/2097251/Programming+Behaviours) Section in Daniel's blog.
 - [Python 3 Pattern, Recipe and Idioms](https://python-3-patterns-idioms-test.readthedocs.io/en/latest/index.html)
-- [An Intro to Behavior Trees in Robotics and AI](https://arxiv.org/pdf/1709.00084.pdf)
