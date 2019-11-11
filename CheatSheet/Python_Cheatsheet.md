@@ -129,6 +129,18 @@ Celsius = map(lambda x: (float(5)/9 * (T - 32))
 fib = [0,1,1,2,3,5,8,13,21,34,55]
 result = filter(lambda x: x % 2, fib)  # [0, 2, 8, 34]
 ```
+### Modifing contents of json files and generate new ones with `jsonpointer`
+```
+from jsonpointer import set_pointer
+from jsonpointer import resolve_pointer
+
+for i in range(100):
+    set_pointer(yaml_dict, '/agents/0/actions/0/follow_lane/speed', 10 + i/10)
+    set_pointer(yaml_dict, '/agents/1/actions/0/follow_lane/speed', 12 + i/10)
+
+    with open('agents_follow_maliput_{}.yml'.format(i), 'w+') as yaml_file:
+        yaml.dump(yaml_dict, yaml_file, default_flow_style=False)
+```
 
 ### ```sys.argv``` 
 ```sys.argv``` is a list in Python, which contains the command-line arguments passed to the script.
