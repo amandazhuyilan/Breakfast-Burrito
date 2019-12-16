@@ -161,5 +161,14 @@ sys.stdout.write('\x1b[1A')
 sys.stdout.write('\x1b[2K')
 ```
 
+### `Unittest`ing
 
-
+- Dealing with Error and Exceptions
+```
+with self.assertRaises(TypeError) as cm:
+    failure.fail()
+self.assertEqual(
+    'The registeraddress must be an integer. Given: 1.0',
+    str(cm.exception)
+)
+```
