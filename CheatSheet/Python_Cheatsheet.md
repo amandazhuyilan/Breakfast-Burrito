@@ -97,6 +97,10 @@ Safely create a nested directory:
 ```
 os.makedirs("path/to/directory", exist_ok=True)  # succeeds even if directory exists.
 ```
+Get basename from a filename
+```
+csv_name = os.path.basename('/home/yilanzhu/Desktop/dashboard-data/2018-12-14.csv') # returns 2018-12-14.csv
+```
 
 ### ```lambda``` functions
 
