@@ -91,6 +91,13 @@ max_num = sys.maxint
 min_num = -sys.maxint
 ```
 
+### File Related Operations
+
+Safely create a nested directory:
+```
+os.makedirs("path/to/directory", exist_ok=True)  # succeeds even if directory exists.
+```
+
 ### ```lambda``` functions
 
 Lamda operators are small annoymous functions with a general syntax of: ```lambda argument_list: expression```
