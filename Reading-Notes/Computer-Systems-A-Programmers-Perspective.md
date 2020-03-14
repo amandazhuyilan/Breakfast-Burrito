@@ -51,3 +51,18 @@ or on an *adapter*(a card that plugs into a slot on the motherboard).
    - [OS] *Files* as an abstraction of I/O devices,
    - [OS] *Processes* as an abstraction of a running program,
    - [OS] *Virtual Machine* as an abstraction to the entire computer.
+
+#### Chap. 2 Representing and Manipulating Information
+- **Hexadecimal Notation** is used to conveniently describe bytes (8 bits). Binary notation is too verbose, decimal notation is too tedious to convert to and back from.
+
+- **Word Sizes** indicate the size of pointer data. The most important system parameter determined by the word size is the maximum size of the _virtual_ address space. 32-bit word size limit the virtual address space to 4GB, while a 64-it word size leads to a virtual address space of 16 exabytes (2^60) bytes.
+
+- **Little & big endian** - for an int that has a hexadecimal value of `0x012345` at address `0x100`:
+  - Big endian: most significant byte comes first - [`0x100`] -> `01`, [`0x101`]->`23`, [`0x102`]->'45', IBM, Oracle.
+  - Little endian: least significant byte comes first - [`0x100`] -> `45`, [`0x101`]->`23`, [`0x102`]->'01', Windows & Linux, Intel, Andriod & IOS.
+
+- **Shift Operations in C**
+  - Logical shift: A logical right shift fills in the left end with `k` zeros. [For **unsigned data**]
+  - Aritmetic shift: An arithmetic right shift fills the in left end with `k` repetition with the most significant bit.
+  - Shifts have lower precedence than shifts - `1<<2 + 3 << 4 => 1 << (2 + 3) << 4.
+
