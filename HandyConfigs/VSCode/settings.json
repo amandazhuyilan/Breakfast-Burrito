@@ -1,0 +1,13 @@
+# name of your 1st machine
+Host  first-dev-pc
+# ip of first-dev-pc
+HostName 172.xx.y.zzz 
+User amandazhu 
+
+# name of second dev pc
+Host second-dev-vm
+# ip of second dev pc
+HostName 10.aa.bbb.cc
+User ubuntu
+ProxyJump first-dev-pc
+IdentityFile ~/.ssh/id_rsa
