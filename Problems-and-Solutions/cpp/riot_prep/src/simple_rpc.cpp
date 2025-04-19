@@ -39,23 +39,3 @@ void Combat(Player& attacker, Player& defender) {
     defender.getAttackedby(attacker.getAttackPower());
     std::cout << attacker.getName() << " attacks " << defender.getName() << " for " << attacker.getAttackPower() << " damage. " << defender.getName() << " has " << defender.getHealth() << " left." << std::endl;
 }
-
-int main() {
-    Player player_1 = Player("Alice", 100, 15);
-    Player player_2 = Player("Bob", 105, 18);
-    
-    for (int32_t i = 0; i < TIMEOUT_SEC; i++) {
-        if (player_1.isDead()) {
-            std::cout << player_2.getName() << " wins!" << std::endl;
-            return 0;
-        }
-        else if (player_2.isDead()) {
-            std::cout << player_1.getName() << " wins!" << std::endl;
-            return 0;
-        }
-        Combat(player_1, player_2);
-        Combat(player_2, player_1);
-
-        std::this_thread::sleep_for(std::chrono::seconds(1));
-    }
-}
