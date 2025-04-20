@@ -47,19 +47,19 @@ Turn 10: Bob attacks Alice for 8 damage. Alice has 0 health left.
 Bob wins!
 ```
 
-3. [Tiny Tanks](./src/tiny_tanks.cpp)
+3. [Simple ECS](./src/simple_ecs.cpp)
 
-You're building a mini ECS (Entity-Component-System) game engine to simulate tanks moving around a map. Each tank is an entity, and they have components like Position and Velocity. Your goal is to implement thread-safe component storage and a movement system that updates tank positions in a multithreaded environment.
+You're building a mini ECS (Entity-Component-System) game engine to simulate objects moving around a map. Each object is an entity, and they have components like Position and Velocity. Your goal is to implement thread-safe component storage and a movement system that updates entity positions in a multithreaded environment.
 
 ECS core concepts:
 - Entity: A unique identifier (e.g., `uint32_t`) for game objects.
 - Component: Pure data like Position, Velocity.
-- System: Logic that processes entities with specific components (e.g., MovementSystem).
+- System: Logic that processes entities with specific components (e.g., `MovementSystem`).
 
 Implement component storage:
 - `PositionComponentStorage` and `VelocityComponentStorage` should store components per entity.
 - Must use RAII for lock management (`std::lock_guard` or `std::scoped_lock`).
-- Must use std::mutex to ensure thread-safe access.
+- Must use `std::mutex` to ensure thread-safe access.
 
 Create a `MovementSystem`:
 - For each entity with both `Position` and `Velocity`, compute the new position.
@@ -72,7 +72,7 @@ Simulate the game:
 
 Sample output:
 ```
-Tank 1 final position: (2, 0)
-Tank 2 final position: (4, 6)
-Tank 3 final position: (11, -1.5)
+Entity 1 final position: (2, 0)
+Entity 2 final position: (4, 6)
+Entity 3 final position: (11, -1.5)
 ```

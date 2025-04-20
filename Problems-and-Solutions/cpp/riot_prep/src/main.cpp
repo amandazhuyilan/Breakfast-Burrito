@@ -1,7 +1,7 @@
 #include <iostream>
 #include "shape_factory.cpp"
 #include "simple_rpc.cpp"
-#include "tiny_tanks.cpp"
+#include "simple_ecs.cpp"
 
 void test_shape_factory() {
     std::cout << "==================== Start ShapeFactory ====================" << std::endl;
@@ -35,16 +35,40 @@ int test_simple_rpc() {
     std::cout << "==================== End SimpleRPC ====================" << std::endl;
 }
 
-void test_tiny_tanks() {
+void test_simple_ecs() {
     std::cout << "==================== Start TinyTanks ====================" << std::endl;
+    PositionComponentStorage pos_storage;
+    VelocityComponentStorage vel_storage;
+
+    std::vector<Entity> entity_list = {1, 2, 3};
+    Position p_start = {0.0, 0.0};
+    Velocity v_start = {1.0, 0.0};
+
+
+    for (Entity e : entity_list) {
+        pos_storage.Add(p_start, e);
+        vel_storage.Add(v_start, e);
+
+        std::thread t1(MovementSystem, std::ref(pos_storage), std::ref(vel_storage), std::vector<Entity>{1});
+        std::thread t2(MovementSystem, std::ref(pos_storage), std::ref(vel_storage), std::vector<Entity>{2, 3});
+
+        t1.join();
+        t2.join();
+    }
+
+    for (Entity e : entity_list) {
+        auto pos = pos_storage.Get(e);
+        std::cout << "Entity " << e << " final position is: (" << pos->x << " , " << pos->y << ")" << std::endl;
+    }
 
     std::cout << "==================== End TinyTanks ====================" << std::endl;
 
 }
+
 int main() {
     std::cout << "Starting...." << std::endl;
     test_shape_factory();
     test_simple_rpc();
-    test_tiny_tanks();
+    test_simple_ecs();
     return 0;
 }
