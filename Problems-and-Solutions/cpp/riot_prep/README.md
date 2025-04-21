@@ -76,3 +76,22 @@ Entity 1 final position: (2, 0)
 Entity 2 final position: (4, 6)
 Entity 3 final position: (11, -1.5)
 ```
+
+4. [Ticked-based Combat System](./src/tick_based_combat.cpp)
+
+Build a combat system for a small multiplayer game that runs at 20 ticks per second. Players send inputs (e.g., move or attack commands) to the server. The server processes the inputs in discrete simulation ticks and sends back authoritative state updates.
+
+Design a simplified system that includes the following:
+- `PlayerInput` struct – represents player commands (movement/attack).
+- `PlayerState` struct – stores player position, health, and unique ID.
+- `GameServer` class – receives inputs, runs simulation on fixed ticks, and broadcasts updated player states
+- `GameClient` class – sends inputs, receives states, and performs client-side interpolation between server snapshots.
+
+Requirements:
+- The server should process all received inputs each tick.
+- Health should decrease if a player is within range of an attacker.
+- Client interpolation should be based on the last two server snapshots.
+- Use appropriate C++ data structures (e.g., `std::deque`, `std::map`, `std::chrono`).
+    - Use `std::chrono` or a mock tick manager.
+- Assume 1v1 combat only.
+
